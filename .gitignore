@@ -1,6 +1,6 @@
 .vs
-.obj
-.ilk
-.log
-.pdb
-.tlog
+*.obj
+*.ilk
+*.log
+*.pdb
+*.tlog
