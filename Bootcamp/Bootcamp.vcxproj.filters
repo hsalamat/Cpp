@@ -22,6 +22,9 @@
     <Filter Include="Source Files\Algorithms">
       <UniqueIdentifier>{028b13dd-04d8-4297-b412-09d09935ca2b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Demos">
+      <UniqueIdentifier>{549ab583-f05c-450f-a60f-411fdc114678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Algorithms\BasicSearching.cpp">
@@ -45,11 +48,38 @@
     <ClCompile Include="Algorithms\MergeSort.cpp">
       <Filter>Source Files\Algorithms</Filter>
     </ClCompile>
-    <ClCompile Include="Algorithms\CppTest1.cpp">
-      <Filter>Source Files\Algorithms</Filter>
+    <ClCompile Include="Demos\ellipsesDemo.cpp">
+      <Filter>Source Files\Demos</Filter>
     </ClCompile>
-    <ClCompile Include="Algorithms\CppTest2.cpp">
-      <Filter>Source Files\Algorithms</Filter>
+    <ClCompile Include="Demos\find_ifDemo.cpp">
+      <Filter>Source Files\Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="Demos\getlineDemo.cpp">
+      <Filter>Source Files\Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="Demos\intellisenseDemo.cpp">
+      <Filter>Source Files\Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="Demos\intellisenseDemo-Solution.cpp">
+      <Filter>Source Files\Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="Demos\not1Demo.cpp">
+      <Filter>Source Files\Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="Demos\promotionPrizeDemo.cpp">
+      <Filter>Source Files\Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="Demos\promotionPrizeDemo-Solution.cpp">
+      <Filter>Source Files\Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="Demos\ptrfuncDemo.cpp">
+      <Filter>Source Files\Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="Demos\stoiDemo.cpp">
+      <Filter>Source Files\Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="Demos\mapDemo.cpp">
+      <Filter>Source Files\Demos</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

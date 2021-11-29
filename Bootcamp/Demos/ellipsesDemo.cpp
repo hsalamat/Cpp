@@ -1,16 +1,21 @@
-//Read  numbers from stdin and print their sum to stdout.
-//Task
-//Read 3 numbers from stdin and print their sum to stdout.
-//
-//Input Format
-//
-//One line that contains  space - separated integers : a , b, and c.
-//
-//Constraints
-//1<=a,b,c<=1000
-//Output Format
-//
-//Print the sum of the three numbers on a single line.
+/** @file ellipsesDemo.cpp
+ *  @brief using vairable argument
+ *  Read  numbers from stdin and print their sum to stdout.
+    Task
+    Read 3 numbers from stdin and print their sum to stdout.
+
+    Input Format
+    One line that contains  space - separated integers : a , b, and c.
+
+    Constraints
+    1<=a,b,c<=1000
+    Output Format
+    Print the sum of the three numbers on a single line.
+
+ *  @author Hooman Salamat
+ *  @bug No known bugs.
+ */
+
 
 #include <cmath>
 #include <cstdio>
