@@ -25,6 +25,9 @@
     <Filter Include="Source Files\Demos">
       <UniqueIdentifier>{549ab583-f05c-450f-a60f-411fdc114678}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\ProjectEuler">
+      <UniqueIdentifier>{8849cdf1-6e6f-46a6-88fb-09e4cf18439b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Algorithms\BasicSearching.cpp">
@@ -80,6 +83,57 @@
     </ClCompile>
     <ClCompile Include="Demos\mapDemo.cpp">
       <Filter>Source Files\Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithms\DepthFirstBinaryTreeTraversals.cpp">
+      <Filter>Source Files\Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithms\LevelOrderBinaryTreeTraversal.cpp">
+      <Filter>Source Files\Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithms\DepthFirstGraphTreeTraversals.cpp">
+      <Filter>Source Files\Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithms\BFSGraphTraversals.cpp">
+      <Filter>Source Files\Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectEuler\Problem-1.cpp">
+      <Filter>Source Files\ProjectEuler</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectEuler\Problem-2.cpp">
+      <Filter>Source Files\ProjectEuler</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectEuler\Problem-3.cpp">
+      <Filter>Source Files\ProjectEuler</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectEuler\Problem-4.cpp">
+      <Filter>Source Files\ProjectEuler</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectEuler\Problem-5.cpp">
+      <Filter>Source Files\ProjectEuler</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectEuler\Problem-6.cpp">
+      <Filter>Source Files\ProjectEuler</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectEuler\Problem-7.cpp">
+      <Filter>Source Files\ProjectEuler</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectEuler\Problem-8.cpp">
+      <Filter>Source Files\ProjectEuler</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectEuler\Problem-9.cpp">
+      <Filter>Source Files\ProjectEuler</Filter>
+    </ClCompile>
+    <ClCompile Include="Data Structures\DynamicArray.cpp">
+      <Filter>Source Files\Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Data Structures\UniquePointer.cpp">
+      <Filter>Source Files\Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectEuler\Problem-10.cpp">
+      <Filter>Source Files\ProjectEuler</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectEuler\Problem-11.cpp">
+      <Filter>Source Files\ProjectEuler</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
