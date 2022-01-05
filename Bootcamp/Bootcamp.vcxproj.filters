@@ -135,5 +135,8 @@
     <ClCompile Include="ProjectEuler\Problem-11.cpp">
       <Filter>Source Files\ProjectEuler</Filter>
     </ClCompile>
+    <ClCompile Include="Demos\passbyDemo.cpp">
+      <Filter>Source Files\Demos</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
