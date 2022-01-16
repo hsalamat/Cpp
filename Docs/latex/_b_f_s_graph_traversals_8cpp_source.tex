@@ -1,0 +1,77 @@
+\hypertarget{_b_f_s_graph_traversals_8cpp_source}{}\doxysection{BFSGraph\+Traversals.\+cpp}
+\label{_b_f_s_graph_traversals_8cpp_source}\index{Bootcamp/Algorithms/BFSGraphTraversals.cpp@{Bootcamp/Algorithms/BFSGraphTraversals.cpp}}
+\mbox{\hyperlink{_b_f_s_graph_traversals_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00054}00054 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00055}00055 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00057}00057 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00059}\mbox{\hyperlink{class_graph}{00059}} \textcolor{keyword}{class }\mbox{\hyperlink{class_graph}{Graph}} \{}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00060}00060     \textcolor{keywordtype}{int} numVertices;}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00061}00061     list<int>* adjLists;}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00062}00062     \textcolor{keywordtype}{bool}* visited;}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00064}00064 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00065}00065     \mbox{\hyperlink{class_graph_a7377fb78cab55e7d3bb72d151ccaecba}{Graph}}(\textcolor{keywordtype}{int} vertices);}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00066}00066     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_a2ffbe91c10aac8564898023d4f0fbbbf}{addEdge}}(\textcolor{keywordtype}{int} src, \textcolor{keywordtype}{int} dest);}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00067}00067     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_ae05d7d19a7a3d2892a3bf85e3aa3ad45}{BFS}}(\textcolor{keywordtype}{int} startVertex);}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00068}00068 \};}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00070}00070 \textcolor{comment}{// Create a graph with given vertices,}}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00071}00071 \textcolor{comment}{// and maintain an adjacency list}}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00072}\mbox{\hyperlink{class_graph_a7377fb78cab55e7d3bb72d151ccaecba}{00072}} \mbox{\hyperlink{class_graph_a7377fb78cab55e7d3bb72d151ccaecba}{Graph::Graph}}(\textcolor{keywordtype}{int} vertices) \{}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00073}00073     numVertices = vertices;}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00074}00074     adjLists = \textcolor{keyword}{new} list<int>[vertices];}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00075}00075 \}}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00077}00077 \textcolor{comment}{// Add edges to the graph}}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00078}\mbox{\hyperlink{class_graph_a2ffbe91c10aac8564898023d4f0fbbbf}{00078}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_a2ffbe91c10aac8564898023d4f0fbbbf}{Graph::addEdge}}(\textcolor{keywordtype}{int} src, \textcolor{keywordtype}{int} dest) \{}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00079}00079     adjLists[src].push\_back(dest);}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00080}00080     adjLists[dest].push\_back(src);}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00081}00081 \}}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00083}00083 \textcolor{comment}{// BFS algorithm}}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00084}\mbox{\hyperlink{class_graph_ae05d7d19a7a3d2892a3bf85e3aa3ad45}{00084}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_ae05d7d19a7a3d2892a3bf85e3aa3ad45}{Graph::BFS}}(\textcolor{keywordtype}{int} startVertex) \{}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00085}00085     visited = \textcolor{keyword}{new} \textcolor{keywordtype}{bool}[numVertices];}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00086}00086     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < numVertices; i++)}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00087}00087         visited[i] = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00089}00089     list<int> queue;}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00091}00091     visited[startVertex] = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00092}00092     queue.push\_back(startVertex);}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00094}00094     list<int>::iterator i;}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00096}00096     \textcolor{keywordflow}{while} (!queue.empty()) \{}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00097}00097         \textcolor{keywordtype}{int} currVertex = queue.front();}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00098}00098         cout << \textcolor{stringliteral}{"{}Visited "{}} << currVertex << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00099}00099         queue.pop\_front();}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00101}00101         \textcolor{keywordflow}{for} (i = adjLists[currVertex].begin(); i != adjLists[currVertex].end(); ++i) \{}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00102}00102             \textcolor{keywordtype}{int} adjVertex = *i;}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00103}00103             \textcolor{keywordflow}{if} (!visited[adjVertex]) \{}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00104}00104                 visited[adjVertex] = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00105}00105                 queue.push\_back(adjVertex);}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00106}00106             \}}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00107}00107         \}}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00108}00108     \}}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00109}00109 \}}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00111}\mbox{\hyperlink{_b_f_s_graph_traversals_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00111}} \textcolor{keywordtype}{int} \mbox{\hyperlink{_b_f_s_graph_traversals_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}() \{}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00112}00112     \mbox{\hyperlink{class_graph}{Graph}} g(4);}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00113}00113     g.\mbox{\hyperlink{class_graph_a2ffbe91c10aac8564898023d4f0fbbbf}{addEdge}}(0, 1);}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00114}00114     g.\mbox{\hyperlink{class_graph_a2ffbe91c10aac8564898023d4f0fbbbf}{addEdge}}(0, 2);}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00115}00115     g.\mbox{\hyperlink{class_graph_a2ffbe91c10aac8564898023d4f0fbbbf}{addEdge}}(1, 2);}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00116}00116     g.\mbox{\hyperlink{class_graph_a2ffbe91c10aac8564898023d4f0fbbbf}{addEdge}}(2, 0);}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00117}00117     g.\mbox{\hyperlink{class_graph_a2ffbe91c10aac8564898023d4f0fbbbf}{addEdge}}(2, 3);}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00118}00118     g.\mbox{\hyperlink{class_graph_a2ffbe91c10aac8564898023d4f0fbbbf}{addEdge}}(3, 3);}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00119}00119 }
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00120}00120     g.\mbox{\hyperlink{class_graph_ae05d7d19a7a3d2892a3bf85e3aa3ad45}{BFS}}(2);}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00121}00121 }
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00122}00122     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{_b_f_s_graph_traversals_8cpp_source_l00123}00123 \}}
+
+\end{DoxyCode}

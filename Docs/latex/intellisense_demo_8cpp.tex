@@ -1,0 +1,95 @@
+\hypertarget{intellisense_demo_8cpp}{}\doxysection{Bootcamp/\+Demos/intellisense\+Demo.cpp File Reference}
+\label{intellisense_demo_8cpp}\index{Bootcamp/Demos/intellisenseDemo.cpp@{Bootcamp/Demos/intellisenseDemo.cpp}}
+
+
+Game Customer Review You are building a way to help game customer search reviews quicker by providing real-\/time suggestions to search terms when the customer starts typing.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$string\+\_\+view$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ vector$<$ string $>$ $>$ \mbox{\hyperlink{intellisense_demo_8cpp_a7d7133a2741258bcf3f68264e2a269f1}{search\+Sugesstion}} (vector$<$ string $>$ repository, string customer\+Query)
+\item 
+string \mbox{\hyperlink{intellisense_demo_8cpp_aad9a52cb92d183ab17b01c5548894608}{ltrim}} (const string \&str)
+\item 
+string \mbox{\hyperlink{intellisense_demo_8cpp_aea3de1fa9e849a14b95c1bfcca0a70b3}{rtrim}} (const string \&str)
+\item 
+int \mbox{\hyperlink{intellisense_demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Game Customer Review You are building a way to help game customer search reviews quicker by providing real-\/time suggestions to search terms when the customer starts typing. 
+
+When given a minimum of two characters into the serach field the system will suggest at most three keywords from the review word repository. As the customer continues to type in the reviews search bar the relavant keyword suggestions will update automatically.
+
+Write an algorithm that will output a maximum of three keyword suggestions after each character is typed by the customer in the search field.
+
+If there are more than three acceptable keywords, return the keywords that are first in alphabetical order. Only return krword suggestions after the customer has entered two characters. Keyword suggestions must start with the characters already typed. Both the repository and the customer\+Query should be compared in a case sensitive way.
+
+Input The input to the method/fucntion consists of two arguments\+: repository\+: a list of unique strings representingthe various keywords from the review comment section customer\+Query\+: a string representing the full search query of the customer
+
+Output Reutrns a list of list of strings in lower case, where each list represents the keyword suggestions made by the system as customer types each character of the customer\+Query. Assume customer types characters in order without deleting or removing any characters. If an output is not possible, return an empty array(\mbox{[}$\,$\mbox{]}).
+
+Example Input\+: repository = \mbox{[}\char`\"{}mobile\char`\"{}, \char`\"{}mouse\char`\"{}, \char`\"{}moneypot\char`\"{},\char`\"{}monitor\char`\"{}, \char`\"{}mousepad\char`\"{}\mbox{]} customer\+Query = \char`\"{}mouse\char`\"{}
+
+Outout\+: \mbox{[}\char`\"{}mobile\char`\"{},\char`\"{}moneypot\char`\"{},\char`\"{}monitor\char`\"{}\mbox{]} \mbox{[}\char`\"{}mouse\char`\"{}, \char`\"{}mousepad\char`\"{}\mbox{]} \mbox{[}\char`\"{}mouse\char`\"{},\char`\"{}mousepad\char`\"{}\mbox{]}
+
+Explanation\+: The chain of words that will generate in the search box will be mo, mou, mous, mouse and each line from output shows the suggestion of \char`\"{}mo\char`\"{} \char`\"{}mou\char`\"{}, \char`\"{}mous\char`\"{}, \char`\"{}mouse\char`\"{}, respectively in each line For the keyword suggestions made by the system that are generated for \char`\"{}mo\char`\"{} that matches that will be generated are\+: \mbox{[}\char`\"{}mobile\char`\"{}, \char`\"{}mouse\char`\"{}, \char`\"{}moneypot\char`\"{},\char`\"{}monitor\char`\"{}, \char`\"{}mousepad\char`\"{}\mbox{]} \begin{DoxyAuthor}{Author}
+Hooman Salamat 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000015}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+Definition in file \mbox{\hyperlink{intellisense_demo_8cpp_source}{intellisense\+Demo.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{intellisense_demo_8cpp_aad9a52cb92d183ab17b01c5548894608}\label{intellisense_demo_8cpp_aad9a52cb92d183ab17b01c5548894608}} 
+\index{intellisenseDemo.cpp@{intellisenseDemo.cpp}!ltrim@{ltrim}}
+\index{ltrim@{ltrim}!intellisenseDemo.cpp@{intellisenseDemo.cpp}}
+\doxysubsubsection{\texorpdfstring{ltrim()}{ltrim()}}
+{\footnotesize\ttfamily string ltrim (\begin{DoxyParamCaption}\item[{const string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{intellisense_demo_8cpp_source_l00083}{83}} of file \mbox{\hyperlink{intellisense_demo_8cpp_source}{intellisense\+Demo.\+cpp}}.
+
+\mbox{\Hypertarget{intellisense_demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{intellisense_demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{intellisenseDemo.cpp@{intellisenseDemo.cpp}!main@{main}}
+\index{main@{main}!intellisenseDemo.cpp@{intellisenseDemo.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{intellisense_demo_8cpp_source_l00099}{99}} of file \mbox{\hyperlink{intellisense_demo_8cpp_source}{intellisense\+Demo.\+cpp}}.
+
+\mbox{\Hypertarget{intellisense_demo_8cpp_aea3de1fa9e849a14b95c1bfcca0a70b3}\label{intellisense_demo_8cpp_aea3de1fa9e849a14b95c1bfcca0a70b3}} 
+\index{intellisenseDemo.cpp@{intellisenseDemo.cpp}!rtrim@{rtrim}}
+\index{rtrim@{rtrim}!intellisenseDemo.cpp@{intellisenseDemo.cpp}}
+\doxysubsubsection{\texorpdfstring{rtrim()}{rtrim()}}
+{\footnotesize\ttfamily string rtrim (\begin{DoxyParamCaption}\item[{const string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{intellisense_demo_8cpp_source_l00091}{91}} of file \mbox{\hyperlink{intellisense_demo_8cpp_source}{intellisense\+Demo.\+cpp}}.
+
+\mbox{\Hypertarget{intellisense_demo_8cpp_a7d7133a2741258bcf3f68264e2a269f1}\label{intellisense_demo_8cpp_a7d7133a2741258bcf3f68264e2a269f1}} 
+\index{intellisenseDemo.cpp@{intellisenseDemo.cpp}!searchSugesstion@{searchSugesstion}}
+\index{searchSugesstion@{searchSugesstion}!intellisenseDemo.cpp@{intellisenseDemo.cpp}}
+\doxysubsubsection{\texorpdfstring{searchSugesstion()}{searchSugesstion()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ string $>$ $>$ search\+Sugesstion (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{repository,  }\item[{string}]{customer\+Query }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{intellisense_demo_8cpp_source_l00065}{65}} of file \mbox{\hyperlink{intellisense_demo_8cpp_source}{intellisense\+Demo.\+cpp}}.
+

@@ -1,0 +1,45 @@
+\hypertarget{_problem-6_8cpp_source}{}\doxysection{Problem-\/6.cpp}
+\label{_problem-6_8cpp_source}\index{Bootcamp/ProjectEuler/Problem-\/6.cpp@{Bootcamp/ProjectEuler/Problem-\/6.cpp}}
+\mbox{\hyperlink{_problem-6_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00009}00009 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00010}00010 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#include <cassert>}}
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00012}00012 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00013}00013 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00016}\mbox{\hyperlink{_problem-6_8cpp_af209719579bf02b5ad7af158f1315f36}{00016}} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \mbox{\hyperlink{_problem-6_8cpp_af209719579bf02b5ad7af158f1315f36}{sum\_of\_squares}}(\textcolor{keywordtype}{int} range)}
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00017}00017 \{}
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00018}00018     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} sumOfSquares = 0;}
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00019}00019     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i <= range; i++)}
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00020}00020         sumOfSquares += pow(i, 2);}
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00022}00022     \textcolor{keywordflow}{return} sumOfSquares;}
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00023}00023 \}}
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00024}\mbox{\hyperlink{_problem-6_8cpp_a42d89da146e37e73e24cf54edd7801f6}{00024}} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \mbox{\hyperlink{_problem-6_8cpp_a42d89da146e37e73e24cf54edd7801f6}{square\_of\_sums}}(\textcolor{keywordtype}{int} range)}
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00025}00025 \{}
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00026}00026     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} squareOfSums = 0;}
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00027}00027     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i <= range; i++)}
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00028}00028         squareOfSums += i;}
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00029}00029     squareOfSums = pow(squareOfSums, 2);}
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00031}00031     \textcolor{keywordflow}{return} squareOfSums;}
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00032}00032 \}}
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00035}\mbox{\hyperlink{_problem-6_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00035}} \textcolor{keywordtype}{int} \mbox{\hyperlink{_problem-6_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00036}00036 \{}
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00038}00038     assert(\mbox{\hyperlink{_problem-6_8cpp_af209719579bf02b5ad7af158f1315f36}{sum\_of\_squares}}(10) == (\textcolor{keywordtype}{long} \textcolor{keywordtype}{long}) 385);}
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00039}00039     assert(\mbox{\hyperlink{_problem-6_8cpp_a42d89da146e37e73e24cf54edd7801f6}{square\_of\_sums}}(10) == (\textcolor{keywordtype}{long} \textcolor{keywordtype}{long}) 3025);}
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00042}00042     cout << endl << }
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00043}00043         \textcolor{stringliteral}{"{}the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum : "{}} }
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00044}00044         << \mbox{\hyperlink{_problem-6_8cpp_a42d89da146e37e73e24cf54edd7801f6}{square\_of\_sums}}(100) -\/ \mbox{\hyperlink{_problem-6_8cpp_af209719579bf02b5ad7af158f1315f36}{sum\_of\_squares}}(100) << endl;}
+\DoxyCodeLine{\Hypertarget{_problem-6_8cpp_source_l00045}00045 \}}
+
+\end{DoxyCode}

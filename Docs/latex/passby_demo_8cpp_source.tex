@@ -1,0 +1,46 @@
+\hypertarget{passby_demo_8cpp_source}{}\doxysection{passby\+Demo.\+cpp}
+\label{passby_demo_8cpp_source}\index{Bootcamp/Demos/passbyDemo.cpp@{Bootcamp/Demos/passbyDemo.cpp}}
+\mbox{\hyperlink{passby_demo_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00007}00007 \textcolor{preprocessor}{\#include <cstdio>}}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00009}00009 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00010}00010 \textcolor{preprocessor}{\#include<iostream>}}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00011}00011 \textcolor{keyword}{using  namespace }std;}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00012}00012 \textcolor{keywordtype}{void} \mbox{\hyperlink{passby_demo_8cpp_a0ff307973198fefb73c9282d68c8f9d0}{passByVal}}(\textcolor{keywordtype}{int} val); \textcolor{comment}{//pass in a copy of the variable}}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00013}00013 \textcolor{keywordtype}{void} \mbox{\hyperlink{passby_demo_8cpp_ae27f0818b68bdc246591c0c60f75898e}{passByRef}}(\textcolor{keywordtype}{int}\& ref); \textcolor{comment}{//pass in the actual variable}}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00014}00014 \textcolor{keywordtype}{void} \mbox{\hyperlink{passby_demo_8cpp_a9da29136a47c09050698d46b3b75600b}{passByPtr}}(\textcolor{keywordtype}{int}* ptr); \textcolor{comment}{//pass in the address of the variable}}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00016}\mbox{\hyperlink{passby_demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00016}} \textcolor{keywordtype}{int} \mbox{\hyperlink{passby_demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00017}00017 \{}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00018}00018     \textcolor{keywordtype}{string} bye;}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00019}00019     \textcolor{keywordtype}{int} val = 5;}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00020}00020     \mbox{\hyperlink{passby_demo_8cpp_a0ff307973198fefb73c9282d68c8f9d0}{passByVal}}(val);}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00021}00021     \mbox{\hyperlink{passby_demo_8cpp_ae27f0818b68bdc246591c0c60f75898e}{passByRef}}(val);}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00022}00022     \mbox{\hyperlink{passby_demo_8cpp_a9da29136a47c09050698d46b3b75600b}{passByPtr}}(\&val);}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00024}00024     getline(cin, bye);}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00025}00025     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00026}00026 \}}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00028}\mbox{\hyperlink{passby_demo_8cpp_a0ff307973198fefb73c9282d68c8f9d0}{00028}} \textcolor{keywordtype}{void} \mbox{\hyperlink{passby_demo_8cpp_a0ff307973198fefb73c9282d68c8f9d0}{passByVal}}(\textcolor{keywordtype}{int} val)}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00029}00029 \{}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00030}00030     val = 10;}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00031}00031     printf(\textcolor{stringliteral}{"{}val = \%i \(\backslash\)n"{}}, val);}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00032}00032 \}}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00034}\mbox{\hyperlink{passby_demo_8cpp_ae27f0818b68bdc246591c0c60f75898e}{00034}} \textcolor{keywordtype}{void} \mbox{\hyperlink{passby_demo_8cpp_ae27f0818b68bdc246591c0c60f75898e}{passByRef}}(\textcolor{keywordtype}{int}\& ref)}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00035}00035 \{}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00036}00036     ref = 20;}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00037}00037     printf(\textcolor{stringliteral}{"{}ref = \%i \(\backslash\)n"{}}, ref);}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00038}00038 \}}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00040}\mbox{\hyperlink{passby_demo_8cpp_a9da29136a47c09050698d46b3b75600b}{00040}} \textcolor{keywordtype}{void} \mbox{\hyperlink{passby_demo_8cpp_a9da29136a47c09050698d46b3b75600b}{passByPtr}}(\textcolor{keywordtype}{int}* ptr)}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00041}00041 \{}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00042}00042     printf(\textcolor{stringliteral}{"{}*ptr = \%i \(\backslash\)n"{}}, *ptr);}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00043}00043     *ptr = 30;}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00044}00044     printf(\textcolor{stringliteral}{"{}*ptr = \%i \(\backslash\)n"{}}, *ptr);}
+\DoxyCodeLine{\Hypertarget{passby_demo_8cpp_source_l00045}00045 \}}
+
+\end{DoxyCode}

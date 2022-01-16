@@ -1,0 +1,27 @@
+\hypertarget{find__if_demo_8cpp_source}{}\doxysection{find\+\_\+if\+Demo.\+cpp}
+\label{find__if_demo_8cpp_source}\index{Bootcamp/Demos/find\_ifDemo.cpp@{Bootcamp/Demos/find\_ifDemo.cpp}}
+\mbox{\hyperlink{find__if_demo_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{find__if_demo_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{find__if_demo_8cpp_source_l00006}00006 \textcolor{preprocessor}{\#include <iostream>}     \textcolor{comment}{// std::cout}}
+\DoxyCodeLine{\Hypertarget{find__if_demo_8cpp_source_l00007}00007 \textcolor{preprocessor}{\#include <algorithm>}    \textcolor{comment}{// std::find\_if}}
+\DoxyCodeLine{\Hypertarget{find__if_demo_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include <vector>}       \textcolor{comment}{// std::vector}}
+\DoxyCodeLine{\Hypertarget{find__if_demo_8cpp_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{find__if_demo_8cpp_source_l00010}\mbox{\hyperlink{find__if_demo_8cpp_ab0c9e93c84d331feb25023862242d5ce}{00010}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{find__if_demo_8cpp_ab0c9e93c84d331feb25023862242d5ce}{IsOdd}}(\textcolor{keywordtype}{int} i) \{}
+\DoxyCodeLine{\Hypertarget{find__if_demo_8cpp_source_l00011}00011     \textcolor{keywordflow}{return} ((i \% 2) == 1);}
+\DoxyCodeLine{\Hypertarget{find__if_demo_8cpp_source_l00012}00012 \}}
+\DoxyCodeLine{\Hypertarget{find__if_demo_8cpp_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{find__if_demo_8cpp_source_l00014}\mbox{\hyperlink{find__if_demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00014}} \textcolor{keywordtype}{int} \mbox{\hyperlink{find__if_demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}() \{}
+\DoxyCodeLine{\Hypertarget{find__if_demo_8cpp_source_l00015}00015     std::vector<int> myvector;}
+\DoxyCodeLine{\Hypertarget{find__if_demo_8cpp_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{find__if_demo_8cpp_source_l00017}00017     myvector.push\_back(10);}
+\DoxyCodeLine{\Hypertarget{find__if_demo_8cpp_source_l00018}00018     myvector.push\_back(25);}
+\DoxyCodeLine{\Hypertarget{find__if_demo_8cpp_source_l00019}00019     myvector.push\_back(40);}
+\DoxyCodeLine{\Hypertarget{find__if_demo_8cpp_source_l00020}00020     myvector.push\_back(55);}
+\DoxyCodeLine{\Hypertarget{find__if_demo_8cpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{find__if_demo_8cpp_source_l00022}00022     std::vector<int>::iterator it = std::find\_if(myvector.begin(), myvector.end(), \mbox{\hyperlink{struct_is_odd}{IsOdd}});}
+\DoxyCodeLine{\Hypertarget{find__if_demo_8cpp_source_l00023}00023     std::cout << \textcolor{stringliteral}{"{}The first odd value is "{}} << *it << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{\Hypertarget{find__if_demo_8cpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{find__if_demo_8cpp_source_l00025}00025     \textcolor{keywordflow}{return} 0;}
+
+\end{DoxyCode}

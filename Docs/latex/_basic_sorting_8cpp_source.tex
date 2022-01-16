@@ -1,0 +1,28 @@
+\hypertarget{_basic_sorting_8cpp_source}{}\doxysection{Basic\+Sorting.\+cpp}
+\label{_basic_sorting_8cpp_source}\index{Bootcamp/Algorithms/BasicSorting.cpp@{Bootcamp/Algorithms/BasicSorting.cpp}}
+\mbox{\hyperlink{_basic_sorting_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_basic_sorting_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_basic_sorting_8cpp_source_l00017}00017 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_basic_sorting_8cpp_source_l00018}00018 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{\Hypertarget{_basic_sorting_8cpp_source_l00019}00019 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_basic_sorting_8cpp_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_basic_sorting_8cpp_source_l00021}\mbox{\hyperlink{_basic_sorting_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00021}} \textcolor{keywordtype}{int} \mbox{\hyperlink{_basic_sorting_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\Hypertarget{_basic_sorting_8cpp_source_l00022}00022 \{}
+\DoxyCodeLine{\Hypertarget{_basic_sorting_8cpp_source_l00023}00023     \textcolor{keywordtype}{int} arr[] = \{ 1, 5, 8, 9, 6, 7, 3, 4, 2, 0 \};}
+\DoxyCodeLine{\Hypertarget{_basic_sorting_8cpp_source_l00024}00024     \textcolor{keywordtype}{int} \mbox{\hyperlink{_binary_search_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}} = \textcolor{keyword}{sizeof}(arr) / \textcolor{keyword}{sizeof}(arr[0]);}
+\DoxyCodeLine{\Hypertarget{_basic_sorting_8cpp_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_basic_sorting_8cpp_source_l00026}00026     \textcolor{comment}{/*Here we take two parameters, the beginning of the}}
+\DoxyCodeLine{\Hypertarget{_basic_sorting_8cpp_source_l00027}00027 \textcolor{comment}{    array and the length n upto which we want the array to}}
+\DoxyCodeLine{\Hypertarget{_basic_sorting_8cpp_source_l00028}00028 \textcolor{comment}{    be sorted*/}}
+\DoxyCodeLine{\Hypertarget{_basic_sorting_8cpp_source_l00029}00029     sort(arr, arr + \mbox{\hyperlink{_binary_search_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}});}
+\DoxyCodeLine{\Hypertarget{_basic_sorting_8cpp_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_basic_sorting_8cpp_source_l00031}00031     cout << \textcolor{stringliteral}{"{}\(\backslash\)nArray after sorting using "{}}}
+\DoxyCodeLine{\Hypertarget{_basic_sorting_8cpp_source_l00032}00032         \textcolor{stringliteral}{"{}default sort is : \(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_basic_sorting_8cpp_source_l00033}00033     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{_binary_search_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}; ++i)}
+\DoxyCodeLine{\Hypertarget{_basic_sorting_8cpp_source_l00034}00034         cout << arr[i] << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{\Hypertarget{_basic_sorting_8cpp_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_basic_sorting_8cpp_source_l00036}00036     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{_basic_sorting_8cpp_source_l00037}00037 \}}
+
+\end{DoxyCode}

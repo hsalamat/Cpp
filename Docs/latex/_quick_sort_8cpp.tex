@@ -1,0 +1,90 @@
+\hypertarget{_quick_sort_8cpp}{}\doxysection{Bootcamp/\+Algorithms/\+Quick\+Sort.cpp File Reference}
+\label{_quick_sort_8cpp}\index{Bootcamp/Algorithms/QuickSort.cpp@{Bootcamp/Algorithms/QuickSort.cpp}}
+
+
+quick sort This technique follows the divide and conquers algorithm and is considered very efficient and quicker for huge arrays.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_quick_sort_8cpp_a4b9708d87be7a409eff20e5e7e8b43c8}{swap}} (int $\ast$\mbox{\hyperlink{_binary_search_8cpp_a34eebba7303340e07cd8fc27ff9aed3e}{a}}, int $\ast$b)
+\item 
+int \mbox{\hyperlink{_quick_sort_8cpp_a4985bc30bb7432b504cb923f601a4b20}{partition}} (vector$<$ int $>$ arr, int low, int high)
+\item 
+void \mbox{\hyperlink{_quick_sort_8cpp_ad7e737ce9e0bdbe46d1dd765ddbc4696}{quick\+Sort}} (vector$<$ int $>$ arr, int low, int high)
+\item 
+void \mbox{\hyperlink{_quick_sort_8cpp_a59b72871577a437752c8cc773fa716d5}{print\+Array}} (vector$<$ int $>$ list)
+\item 
+int \mbox{\hyperlink{_quick_sort_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+quick sort This technique follows the divide and conquers algorithm and is considered very efficient and quicker for huge arrays. 
+
+They are divided into three subsections\+: a left, a right and the middle. The middle element has a single value, and it is named as the pivot. The mechanism goes like this, the element in the left segment should not have a key larger than the middle element and the no element in the right has a key that is smaller than that of the middle element. Quicksort uses a recursive concept while sorting sub-\/part. The array is divided into subpart, again left and right segments are partitioned by conquering. \begin{DoxyAuthor}{Author}
+Hooman Salamat 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000009}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+Definition in file \mbox{\hyperlink{_quick_sort_8cpp_source}{Quick\+Sort.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_quick_sort_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{_quick_sort_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{QuickSort.cpp@{QuickSort.cpp}!main@{main}}
+\index{main@{main}!QuickSort.cpp@{QuickSort.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_quick_sort_8cpp_source_l00078}{78}} of file \mbox{\hyperlink{_quick_sort_8cpp_source}{Quick\+Sort.\+cpp}}.
+
+\mbox{\Hypertarget{_quick_sort_8cpp_a4985bc30bb7432b504cb923f601a4b20}\label{_quick_sort_8cpp_a4985bc30bb7432b504cb923f601a4b20}} 
+\index{QuickSort.cpp@{QuickSort.cpp}!partition@{partition}}
+\index{partition@{partition}!QuickSort.cpp@{QuickSort.cpp}}
+\doxysubsubsection{\texorpdfstring{partition()}{partition()}}
+{\footnotesize\ttfamily int partition (\begin{DoxyParamCaption}\item[{vector$<$ int $>$}]{arr,  }\item[{int}]{low,  }\item[{int}]{high }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_quick_sort_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{_quick_sort_8cpp_source}{Quick\+Sort.\+cpp}}.
+
+\mbox{\Hypertarget{_quick_sort_8cpp_a59b72871577a437752c8cc773fa716d5}\label{_quick_sort_8cpp_a59b72871577a437752c8cc773fa716d5}} 
+\index{QuickSort.cpp@{QuickSort.cpp}!printArray@{printArray}}
+\index{printArray@{printArray}!QuickSort.cpp@{QuickSort.cpp}}
+\doxysubsubsection{\texorpdfstring{printArray()}{printArray()}}
+{\footnotesize\ttfamily void print\+Array (\begin{DoxyParamCaption}\item[{vector$<$ int $>$}]{list }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_quick_sort_8cpp_source_l00072}{72}} of file \mbox{\hyperlink{_quick_sort_8cpp_source}{Quick\+Sort.\+cpp}}.
+
+\mbox{\Hypertarget{_quick_sort_8cpp_ad7e737ce9e0bdbe46d1dd765ddbc4696}\label{_quick_sort_8cpp_ad7e737ce9e0bdbe46d1dd765ddbc4696}} 
+\index{QuickSort.cpp@{QuickSort.cpp}!quickSort@{quickSort}}
+\index{quickSort@{quickSort}!QuickSort.cpp@{QuickSort.cpp}}
+\doxysubsubsection{\texorpdfstring{quickSort()}{quickSort()}}
+{\footnotesize\ttfamily void quick\+Sort (\begin{DoxyParamCaption}\item[{vector$<$ int $>$}]{arr,  }\item[{int}]{low,  }\item[{int}]{high }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_quick_sort_8cpp_source_l00056}{56}} of file \mbox{\hyperlink{_quick_sort_8cpp_source}{Quick\+Sort.\+cpp}}.
+
+\mbox{\Hypertarget{_quick_sort_8cpp_a4b9708d87be7a409eff20e5e7e8b43c8}\label{_quick_sort_8cpp_a4b9708d87be7a409eff20e5e7e8b43c8}} 
+\index{QuickSort.cpp@{QuickSort.cpp}!swap@{swap}}
+\index{swap@{swap}!QuickSort.cpp@{QuickSort.cpp}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void swap (\begin{DoxyParamCaption}\item[{int $\ast$}]{a,  }\item[{int $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_quick_sort_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{_quick_sort_8cpp_source}{Quick\+Sort.\+cpp}}.
+

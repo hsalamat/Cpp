@@ -1,0 +1,72 @@
+\hypertarget{_basic_searching_8cpp}{}\doxysection{Bootcamp/\+Algorithms/\+Basic\+Searching.cpp File Reference}
+\label{_basic_searching_8cpp}\index{Bootcamp/Algorithms/BasicSearching.cpp@{Bootcamp/Algorithms/BasicSearching.cpp}}
+
+
+Problem\+: Given an array arr\mbox{[}\mbox{]} of n elements, write a function to search a given element x in arr\mbox{[}\mbox{]}.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_basic_searching_8cpp_a7c9b82673e7ae84d83b4b734b029fc93}{search}} (int arr\mbox{[}$\,$\mbox{]}, int \mbox{\hyperlink{_binary_search_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}, int x)
+\item 
+void \mbox{\hyperlink{_basic_searching_8cpp_a1ce6c310c60c0d08a380484a51c6534e}{search2}} (vector$<$ int $>$ arr, int search\+\_\+\+Element)
+\begin{DoxyCompactList}\small\item\em Improve Linear Search Worst-\/\+Case Complexity if element Found at last O(n) to O(1) It is the same as previous method because here we are performing 2 ‘if’ operations in one iteration of the loop and in previous method we performed only 1 ‘if’ operation.\+This makes both the time complexities same. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_basic_searching_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Problem\+: Given an array arr\mbox{[}\mbox{]} of n elements, write a function to search a given element x in arr\mbox{[}\mbox{]}. 
+
+A simple approach is to do a linear search, i.\+e Start from the leftmost element of arr\mbox{[}\mbox{]} and one by one compare x with each element of arr\mbox{[}\mbox{]} If x matches with an element, return the index. If x doesn’t match with any of elements, return -\/1. The time complexity of the above algorithm is O(n). ~\newline
+ Linear search is rarely used practically because other search algorithms such as the binary search algorithm and hash tables allow significantly faster-\/searching comparison to Linear search. \begin{DoxyAuthor}{Author}
+Hooman Salamat 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000001}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+Definition in file \mbox{\hyperlink{_basic_searching_8cpp_source}{Basic\+Searching.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_basic_searching_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\label{_basic_searching_8cpp_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{BasicSearching.cpp@{BasicSearching.cpp}!main@{main}}
+\index{main@{main}!BasicSearching.cpp@{BasicSearching.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Linear Search Call
+
+Linear search call on both sides
+
+Definition at line \mbox{\hyperlink{_basic_searching_8cpp_source_l00078}{78}} of file \mbox{\hyperlink{_basic_searching_8cpp_source}{Basic\+Searching.\+cpp}}.
+
+\mbox{\Hypertarget{_basic_searching_8cpp_a7c9b82673e7ae84d83b4b734b029fc93}\label{_basic_searching_8cpp_a7c9b82673e7ae84d83b4b734b029fc93}} 
+\index{BasicSearching.cpp@{BasicSearching.cpp}!search@{search}}
+\index{search@{search}!BasicSearching.cpp@{BasicSearching.cpp}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily int search (\begin{DoxyParamCaption}\item[{int}]{arr\mbox{[}$\,$\mbox{]},  }\item[{int}]{n,  }\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_basic_searching_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{_basic_searching_8cpp_source}{Basic\+Searching.\+cpp}}.
+
+\mbox{\Hypertarget{_basic_searching_8cpp_a1ce6c310c60c0d08a380484a51c6534e}\label{_basic_searching_8cpp_a1ce6c310c60c0d08a380484a51c6534e}} 
+\index{BasicSearching.cpp@{BasicSearching.cpp}!search2@{search2}}
+\index{search2@{search2}!BasicSearching.cpp@{BasicSearching.cpp}}
+\doxysubsubsection{\texorpdfstring{search2()}{search2()}}
+{\footnotesize\ttfamily void search2 (\begin{DoxyParamCaption}\item[{vector$<$ int $>$}]{arr,  }\item[{int}]{search\+\_\+\+Element }\end{DoxyParamCaption})}
+
+
+
+Improve Linear Search Worst-\/\+Case Complexity if element Found at last O(n) to O(1) It is the same as previous method because here we are performing 2 ‘if’ operations in one iteration of the loop and in previous method we performed only 1 ‘if’ operation.\+This makes both the time complexities same. 
+
+
+
+Definition at line \mbox{\hyperlink{_basic_searching_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{_basic_searching_8cpp_source}{Basic\+Searching.\+cpp}}.
+

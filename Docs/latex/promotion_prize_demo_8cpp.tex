@@ -1,0 +1,189 @@
+\hypertarget{promotion_prize_demo_8cpp}{}\doxysection{Bootcamp/\+Demos/promotion\+Prize\+Demo.cpp File Reference}
+\label{promotion_prize_demo_8cpp}\index{Bootcamp/Demos/promotionPrizeDemo.cpp@{Bootcamp/Demos/promotionPrizeDemo.cpp}}
+
+
+Promotion Prize Steam is running a promotion in which customers receive prizes for purchasing a secret combination of games.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{promotion_prize_demo_8cpp_ad96543382faef153388cb0db5e1503e4}{foo}} (vector$<$ string $>$ code\+List, vector$<$ string $>$ shopping\+Cart)
+\begin{DoxyCompactList}\small\item\em this function is expected to return an integer \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{promotion_prize_demo_8cpp_aad9a52cb92d183ab17b01c5548894608}{ltrim}} (const string \&str)
+\item 
+string \mbox{\hyperlink{promotion_prize_demo_8cpp_aea3de1fa9e849a14b95c1bfcca0a70b3}{rtrim}} (const string \&str)
+\item 
+int \mbox{\hyperlink{promotion_prize_demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Promotion Prize Steam is running a promotion in which customers receive prizes for purchasing a secret combination of games. 
+
+The combination will change each day, and the team running the promotion wants to use a code list to make it easy to change the combination. The code list contains groups of games. Both the order of groups within the code list and the order of the games within the groups matter. However, between the groups of game, any number, and type of game is allowable. The term \char`\"{}anything\char`\"{} is used to allow for any type of game to appear in that location within the group.
+
+consider the following secret code list\+: \mbox{[}\mbox{[}group4,group4\mbox{]},\mbox{[}group3,anything,group3\mbox{]}\mbox{]}
+
+Based on the above secret code list, a customer who made wither the following purchases would win the prize\+:
+
+
+\begin{DoxyEnumerate}
+\item group1, group4, group4, group3, group1, group3
+\item group4, group4, group1, group1, group3, group4, group3, group3
+\end{DoxyEnumerate}
+
+write an algorithm to output 1 if the customer is a winner else output 0
+
+Input The input to the function/method consists of two arguments\+:
+\begin{DoxyEnumerate}
+\item code\+List\+: a string array of space-\/separated values representing the order and grouping of specific games that must be purchased in order to win the prize for the day
+\item Shopping\+Cart\+: a list representing the order in which a customer purchases game
+\end{DoxyEnumerate}
+
+Outtput Reutrn an integer 1 if the customer is a winner else return 0
+
+Note \textquotesingle{}anything\textquotesingle{} in the code\+List represents that any game can be ordered in place of \textquotesingle{}anything\textquotesingle{} has to be something, it cannot be \char`\"{}nothing\char`\"{}
+
+\textquotesingle{}anything\textquotesingle{} must represent one and only one game.
+
+if secret code list is empty then it is assumed that customer is a winner.
+
+Examples\+:
+
+Example1
+
+Input\+: code\+List = \mbox{[}\mbox{[}group4, group4\mbox{]},\mbox{[}group3, anything, group3\mbox{]}\mbox{]} shopping\+Cart = \mbox{[}group3,group4, group4, group3, group1, group3\mbox{]} Output\+: 1
+
+Explanation\+: code\+List contains two groups\+: \mbox{[}group4,group4\mbox{]} and \mbox{[}group3, anything, group3\mbox{]}. The second group contains \textquotesingle{}anything\textquotesingle{} so any game can be ordered in place of \textquotesingle{}anything\textquotesingle{} in the shopping cart. The cusomter is a winner as the customer has added games in the order games in the groups and the order of groups in the code\+List is also maintained in the shopping cart.
+
+Example2\+: Input\+: code\+List = \mbox{[}\mbox{[}group4, group4\mbox{]},\mbox{[}group3, anything, group3\mbox{]}\mbox{]} shopping\+Cart = \mbox{[}group3,group1, group3, group4, group4\mbox{]} Output\+: 0
+
+Explanation\+: The customer is not a winner as the customer has added the games in order of groups but group \mbox{[}group3, anything, group3\mbox{]} is not following the group \mbox{[}group4, group4\mbox{]}
+
+Example3\+: Input\+: code\+List = \mbox{[}\mbox{[}group4, group4\mbox{]},\mbox{[}group3, anything, group3\mbox{]}\mbox{]} shopping\+Cart = \mbox{[}group4,group3, group4, group3, group1,group3\mbox{]} Output\+: 0 Explanation\+: The customer is not a winner as the customer has added the games in an order which is not following the order of game names in the first group.
+
+Example4\+: Input\+: code\+List = \mbox{[}\mbox{[}group4, group4\mbox{]},\mbox{[}group4, group4, group3\mbox{]}\mbox{]} shopping\+Cart = \mbox{[}group4,group4, group4, group3\mbox{]} Output\+: 0 Explanation\+: The customer is not a winner as first 2 games form group1, all three games would form group2, but can\textquotesingle{}t because it would contain all groups of group1.
+
+\begin{DoxyAuthor}{Author}
+Hooman Salamat 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000018}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+The combination will change each day, and the team running the promotion wants to use a code list to make it easy to change the combination. The code list contains groups of games. Both the order of groups within the code list and the order of the games within the groups matter. However, between the groups of game, any number, and type of game is allowable. The term \char`\"{}anything\char`\"{} is used to allow for any type of game to appear in that location within the group.
+
+consider the following secret code list\+: \mbox{[}\mbox{[}group4,group4\mbox{]},\mbox{[}group3,anything,group3\mbox{]}\mbox{]}
+
+Based on the above secret code list, a customer who made wither the following purchases would win the prize\+:
+
+
+\begin{DoxyEnumerate}
+\item group1, group4, group4, group3, group1, group3
+\item group4, group4, group1, group1, group3, group4, group3, group3
+\end{DoxyEnumerate}
+
+write an algorithm to output 1 if the customer is a winner else output 0
+
+Input The input to the function/method consists of two arguments\+:
+\begin{DoxyEnumerate}
+\item code\+List\+: a string array of space-\/separated values representing the order and grouping of specific games that must be purchased in order to win the prize for the day
+\item Shopping\+Cart\+: a list representing the order in which a customer purchases game
+\end{DoxyEnumerate}
+
+Outtput Reutrn an integer 1 if the customer is a winner else return 0
+
+Note \textquotesingle{}anything\textquotesingle{} in the code\+List represents that any game can be ordered in place of \textquotesingle{}anything\textquotesingle{} has to be something, it cannot be \char`\"{}nothing\char`\"{}
+
+\textquotesingle{}anything\textquotesingle{} must represent one and only one game.
+
+if secret code list is empty then it is assumed that customer is a winner.
+
+Examples\+:
+
+Example1
+
+Input\+: code\+List = \mbox{[}\mbox{[}group4, group4\mbox{]},\mbox{[}group3, anything, group3\mbox{]}\mbox{]} shopping\+Cart = \mbox{[}group3,group4, group4, group3, group1, group3\mbox{]} Output\+: 1
+
+Explanation\+: code\+List contains two groups\+: \mbox{[}group4,group4\mbox{]} and \mbox{[}group3, anything, group3\mbox{]}. The second group contains \textquotesingle{}anything\textquotesingle{} so any game can be ordered in place of \textquotesingle{}anything\textquotesingle{} in the shopping cart. The cusomter is a winner as the customer has added games in the order games in the groups and the order of groups in the code\+List is also maintained in the shopping cart.
+
+Example2\+: Input\+: code\+List = \mbox{[}\mbox{[}group4, group4\mbox{]},\mbox{[}group3, anything, group3\mbox{]}\mbox{]} shopping\+Cart = \mbox{[}group3,group1, group3, group4, group4\mbox{]} Output\+: 0
+
+Explanation\+: The customer is not a winner as the customer has added the games in order of groups but group \mbox{[}group3, anything, group3\mbox{]} is not following the group \mbox{[}group4, group4\mbox{]}
+
+Example3\+: Input\+: code\+List = \mbox{[}\mbox{[}group4, group4\mbox{]},\mbox{[}group3, anything, group3\mbox{]}\mbox{]} shopping\+Cart = \mbox{[}group4,group3, group4, group3, group1,group3\mbox{]} Output\+: 0 Explanation\+: The customer is not a winner as the customer has added the games in an order which is not following the order of game names in the first group.
+
+Example4\+: Input\+: code\+List = \mbox{[}\mbox{[}group4, group4\mbox{]},\mbox{[}group4, group4, group3\mbox{]}\mbox{]} shopping\+Cart = \mbox{[}group4,group4, group4, group3\mbox{]} Output\+: 0 Explanation\+: The customer is not a winner as first 2 games form group1, all three games would form group2, but can\textquotesingle{}t because it would contain all groups of group1.
+
+\begin{DoxyAuthor}{Author}
+Hooman Salamat 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000019}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+Definition in file \mbox{\hyperlink{promotion_prize_demo_8cpp_source}{promotion\+Prize\+Demo.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{promotion_prize_demo_8cpp_ad96543382faef153388cb0db5e1503e4}\label{promotion_prize_demo_8cpp_ad96543382faef153388cb0db5e1503e4}} 
+\index{promotionPrizeDemo.cpp@{promotionPrizeDemo.cpp}!foo@{foo}}
+\index{foo@{foo}!promotionPrizeDemo.cpp@{promotionPrizeDemo.cpp}}
+\doxysubsubsection{\texorpdfstring{foo()}{foo()}}
+{\footnotesize\ttfamily int foo (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{code\+List,  }\item[{vector$<$ string $>$}]{shopping\+Cart }\end{DoxyParamCaption})}
+
+
+
+this function is expected to return an integer 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code\+List} & \\
+\hline
+{\em shopping\+Cart} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{promotion_prize_demo_8cpp_source_l00101}{101}} of file \mbox{\hyperlink{promotion_prize_demo_8cpp_source}{promotion\+Prize\+Demo.\+cpp}}.
+
+\mbox{\Hypertarget{promotion_prize_demo_8cpp_aad9a52cb92d183ab17b01c5548894608}\label{promotion_prize_demo_8cpp_aad9a52cb92d183ab17b01c5548894608}} 
+\index{promotionPrizeDemo.cpp@{promotionPrizeDemo.cpp}!ltrim@{ltrim}}
+\index{ltrim@{ltrim}!promotionPrizeDemo.cpp@{promotionPrizeDemo.cpp}}
+\doxysubsubsection{\texorpdfstring{ltrim()}{ltrim()}}
+{\footnotesize\ttfamily string ltrim (\begin{DoxyParamCaption}\item[{const string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{promotion_prize_demo_8cpp_source_l00106}{106}} of file \mbox{\hyperlink{promotion_prize_demo_8cpp_source}{promotion\+Prize\+Demo.\+cpp}}.
+
+\mbox{\Hypertarget{promotion_prize_demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{promotion_prize_demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{promotionPrizeDemo.cpp@{promotionPrizeDemo.cpp}!main@{main}}
+\index{main@{main}!promotionPrizeDemo.cpp@{promotionPrizeDemo.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{promotion_prize_demo_8cpp_source_l00122}{122}} of file \mbox{\hyperlink{promotion_prize_demo_8cpp_source}{promotion\+Prize\+Demo.\+cpp}}.
+
+\mbox{\Hypertarget{promotion_prize_demo_8cpp_aea3de1fa9e849a14b95c1bfcca0a70b3}\label{promotion_prize_demo_8cpp_aea3de1fa9e849a14b95c1bfcca0a70b3}} 
+\index{promotionPrizeDemo.cpp@{promotionPrizeDemo.cpp}!rtrim@{rtrim}}
+\index{rtrim@{rtrim}!promotionPrizeDemo.cpp@{promotionPrizeDemo.cpp}}
+\doxysubsubsection{\texorpdfstring{rtrim()}{rtrim()}}
+{\footnotesize\ttfamily string rtrim (\begin{DoxyParamCaption}\item[{const string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{promotion_prize_demo_8cpp_source_l00114}{114}} of file \mbox{\hyperlink{promotion_prize_demo_8cpp_source}{promotion\+Prize\+Demo.\+cpp}}.
+

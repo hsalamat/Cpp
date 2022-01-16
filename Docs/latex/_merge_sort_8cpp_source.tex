@@ -1,0 +1,97 @@
+\hypertarget{_merge_sort_8cpp_source}{}\doxysection{Merge\+Sort.\+cpp}
+\label{_merge_sort_8cpp_source}\index{Bootcamp/Algorithms/MergeSort.cpp@{Bootcamp/Algorithms/MergeSort.cpp}}
+\mbox{\hyperlink{_merge_sort_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00012}00012 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00013}00013 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00014}00014 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00016}00016 \textcolor{comment}{// Merges two subarrays of vector.}}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00017}00017 \textcolor{comment}{// First subarray is vec[begin..mid]}}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00018}00018 \textcolor{comment}{// Second subarray is vec[mid+1..end]}}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00019}\mbox{\hyperlink{_merge_sort_8cpp_a16cb2ba41fd98d8061fea42ea0e99cfa}{00019}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_merge_sort_8cpp_a16cb2ba41fd98d8061fea42ea0e99cfa}{merge}}(vector<int> vec, \textcolor{keywordtype}{int} \textcolor{keyword}{const} left, \textcolor{keywordtype}{int} \textcolor{keyword}{const} mid, \textcolor{keywordtype}{int} \textcolor{keyword}{const} right)}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00020}00020 \{}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00021}00021     \textcolor{keyword}{auto} \textcolor{keyword}{const} subArrayOne = mid -\/ left + 1;}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00022}00022     \textcolor{keyword}{auto} \textcolor{keyword}{const} subArrayTwo = right -\/ mid;}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00024}00024     \textcolor{comment}{// Create temp arrays}}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00025}00025     \textcolor{keyword}{auto}* leftArray = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[subArrayOne],}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00026}00026         * rightArray = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[subArrayTwo];}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00028}00028     \textcolor{comment}{// Copy data to temp arrays leftArray[] and rightArray[]}}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00029}00029     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} i = 0; i < subArrayOne; i++)}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00030}00030         leftArray[i] = vec[left + i];}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00031}00031     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} j = 0; j < subArrayTwo; j++)}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00032}00032         rightArray[j] = vec[mid + 1 + j];}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00034}00034     \textcolor{keyword}{auto} indexOfSubArrayOne = 0, \textcolor{comment}{// Initial index of first sub-\/array}}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00035}00035         indexOfSubArrayTwo = 0; \textcolor{comment}{// Initial index of second sub-\/array}}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00036}00036     \textcolor{keywordtype}{int} indexOfMergedArray = left; \textcolor{comment}{// Initial index of merged array}}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00038}00038     \textcolor{comment}{// Merge the temp arrays back into array[left..right]}}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00039}00039     \textcolor{keywordflow}{while} (indexOfSubArrayOne < subArrayOne \&\& indexOfSubArrayTwo < subArrayTwo) \{}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00040}00040         \textcolor{keywordflow}{if} (leftArray[indexOfSubArrayOne] <= rightArray[indexOfSubArrayTwo]) \{}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00041}00041             vec[indexOfMergedArray] = leftArray[indexOfSubArrayOne];}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00042}00042             indexOfSubArrayOne++;}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00043}00043         \}}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00044}00044         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00045}00045             vec[indexOfMergedArray] = rightArray[indexOfSubArrayTwo];}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00046}00046             indexOfSubArrayTwo++;}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00047}00047         \}}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00048}00048         indexOfMergedArray++;}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00049}00049     \}}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00050}00050     \textcolor{comment}{// Copy the remaining elements of}}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00051}00051     \textcolor{comment}{// left[], if there are any}}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00052}00052     \textcolor{keywordflow}{while} (indexOfSubArrayOne < subArrayOne) \{}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00053}00053         vec[indexOfMergedArray] = leftArray[indexOfSubArrayOne];}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00054}00054         indexOfSubArrayOne++;}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00055}00055         indexOfMergedArray++;}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00056}00056     \}}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00057}00057     \textcolor{comment}{// Copy the remaining elements of}}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00058}00058     \textcolor{comment}{// right[], if there are any}}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00059}00059     \textcolor{keywordflow}{while} (indexOfSubArrayTwo < subArrayTwo) \{}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00060}00060         vec[indexOfMergedArray] = rightArray[indexOfSubArrayTwo];}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00061}00061         indexOfSubArrayTwo++;}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00062}00062         indexOfMergedArray++;}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00063}00063     \}}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00064}00064 \}}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00066}00066 \textcolor{comment}{// begin is for left index and end is}}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00067}00067 \textcolor{comment}{// right index of the sub-\/vector}}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00068}00068 \textcolor{comment}{// of vec to be sorted }}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00069}\mbox{\hyperlink{_merge_sort_8cpp_a6af2d9e6c371495bf0cfdd2573d61f92}{00069}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_merge_sort_8cpp_a6af2d9e6c371495bf0cfdd2573d61f92}{mergeSort}}(vector<int> vec, \textcolor{keywordtype}{int} \textcolor{keyword}{const} begin, \textcolor{keywordtype}{int} \textcolor{keyword}{const} end)}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00070}00070 \{}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00071}00071     \textcolor{keywordflow}{if} (begin >= end)}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00072}00072         \textcolor{keywordflow}{return}; \textcolor{comment}{// Returns recursively}}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00074}00074     \textcolor{keyword}{auto} mid = begin + (end -\/ begin) / 2;}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00075}00075     \mbox{\hyperlink{_merge_sort_8cpp_a6af2d9e6c371495bf0cfdd2573d61f92}{mergeSort}}(vec, begin, mid);}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00076}00076     \mbox{\hyperlink{_merge_sort_8cpp_a6af2d9e6c371495bf0cfdd2573d61f92}{mergeSort}}(vec, mid + 1, end);}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00077}00077     \mbox{\hyperlink{_merge_sort_8cpp_a16cb2ba41fd98d8061fea42ea0e99cfa}{merge}}(vec, begin, mid, end);}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00078}00078 \}}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00080}\mbox{\hyperlink{_merge_sort_8cpp_a59b72871577a437752c8cc773fa716d5}{00080}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_merge_sort_8cpp_a59b72871577a437752c8cc773fa716d5}{printArray}}(vector<int> list)}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00081}00081 \{}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00082}00082     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \mbox{\hyperlink{_binary_search_8cpp_a34eebba7303340e07cd8fc27ff9aed3e}{a}} : list)}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00083}00083         cout << \mbox{\hyperlink{_binary_search_8cpp_a34eebba7303340e07cd8fc27ff9aed3e}{a}} << endl;}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00084}00084 \}}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00087}\mbox{\hyperlink{_merge_sort_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00087}} \textcolor{keywordtype}{int} \mbox{\hyperlink{_merge_sort_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00088}00088 \{}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00090}00090     vector<int> vec = \{ 12, 11, 13, 5, 6, 7 \};}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00092}00092     cout << \textcolor{stringliteral}{"{}Given array is \(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00093}00093     \mbox{\hyperlink{_merge_sort_8cpp_a59b72871577a437752c8cc773fa716d5}{printArray}}(vec);}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00095}00095     \mbox{\hyperlink{_merge_sort_8cpp_a6af2d9e6c371495bf0cfdd2573d61f92}{mergeSort}}(vec, 0, vec.size() -\/ 1);}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00097}00097     cout << \textcolor{stringliteral}{"{}\(\backslash\)nSorted vector is \(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00098}00098     \mbox{\hyperlink{_merge_sort_8cpp_a59b72871577a437752c8cc773fa716d5}{printArray}}(vec);}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00099}00099     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{_merge_sort_8cpp_source_l00100}00100 \}}
+
+\end{DoxyCode}

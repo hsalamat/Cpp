@@ -1,0 +1,27 @@
+\hypertarget{_unique_pointer_8cpp_source}{}\doxysection{Unique\+Pointer.\+cpp}
+\label{_unique_pointer_8cpp_source}\index{Bootcamp/Data Structures/UniquePointer.cpp@{Bootcamp/Data Structures/UniquePointer.cpp}}
+\mbox{\hyperlink{_unique_pointer_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_unique_pointer_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_unique_pointer_8cpp_source_l00007}00007 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_unique_pointer_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{\Hypertarget{_unique_pointer_8cpp_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_unique_pointer_8cpp_source_l00010}\mbox{\hyperlink{struct_foo}{00010}} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_foo}{Foo}}}
+\DoxyCodeLine{\Hypertarget{_unique_pointer_8cpp_source_l00011}00011 \{}
+\DoxyCodeLine{\Hypertarget{_unique_pointer_8cpp_source_l00012}\mbox{\hyperlink{struct_foo_a6bd2a37206c1998b6eee0da1f82f1f3e}{00012}}     \mbox{\hyperlink{struct_foo_a6bd2a37206c1998b6eee0da1f82f1f3e}{Foo}}(std::string v) : \mbox{\hyperlink{struct_foo_aa864e9248aca5a6d6592025795c4f66e}{value}}(v) \{\}}
+\DoxyCodeLine{\Hypertarget{_unique_pointer_8cpp_source_l00013}\mbox{\hyperlink{struct_foo_aaccb536e6905d42a89073097050c08c0}{00013}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_foo_aaccb536e6905d42a89073097050c08c0}{Bar}}() \{ std::cout << \textcolor{stringliteral}{"{}Hello, "{}} << \mbox{\hyperlink{struct_foo_aa864e9248aca5a6d6592025795c4f66e}{value}} << \textcolor{stringliteral}{"{}!"{}} << std::endl; \}}
+\DoxyCodeLine{\Hypertarget{_unique_pointer_8cpp_source_l00014}\mbox{\hyperlink{struct_foo_aa864e9248aca5a6d6592025795c4f66e}{00014}}     std::string \mbox{\hyperlink{struct_foo_aa864e9248aca5a6d6592025795c4f66e}{value}};}
+\DoxyCodeLine{\Hypertarget{_unique_pointer_8cpp_source_l00015}00015 \};}
+\DoxyCodeLine{\Hypertarget{_unique_pointer_8cpp_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_unique_pointer_8cpp_source_l00017}\mbox{\hyperlink{_unique_pointer_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00017}} \textcolor{keywordtype}{int} \mbox{\hyperlink{_unique_pointer_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}() \{}
+\DoxyCodeLine{\Hypertarget{_unique_pointer_8cpp_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_unique_pointer_8cpp_source_l00019}00019     std::unique\_ptr<Foo> FooPtr = std::make\_unique<Foo>(\textcolor{stringliteral}{"{}World"{}});}
+\DoxyCodeLine{\Hypertarget{_unique_pointer_8cpp_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_unique_pointer_8cpp_source_l00021}00021     FooPtr-\/>Bar();}
+\DoxyCodeLine{\Hypertarget{_unique_pointer_8cpp_source_l00022}00022     FooPtr.get()-\/>Bar();}
+\DoxyCodeLine{\Hypertarget{_unique_pointer_8cpp_source_l00023}00023     (*FooPtr).Bar();}
+\DoxyCodeLine{\Hypertarget{_unique_pointer_8cpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_unique_pointer_8cpp_source_l00025}00025     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{_unique_pointer_8cpp_source_l00026}00026 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,44 @@
+\hypertarget{_problem-5_8cpp_source}{}\doxysection{Problem-\/5.cpp}
+\label{_problem-5_8cpp_source}\index{Bootcamp/ProjectEuler/Problem-\/5.cpp@{Bootcamp/ProjectEuler/Problem-\/5.cpp}}
+\mbox{\hyperlink{_problem-5_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00010}00010 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00012}00012 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00013}00013 \textcolor{preprocessor}{\#include <cassert>}}
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00014}00014 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00015}00015 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00018}\mbox{\hyperlink{_problem-5_8cpp_a19d2ca94bfdd002b079d50626596c164}{00018}} \textcolor{keywordtype}{int} \mbox{\hyperlink{_problem-5_8cpp_a19d2ca94bfdd002b079d50626596c164}{findSmallDivisbile}}(\textcolor{keywordtype}{int} range)}
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00019}00019 \{}
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00020}00020     \textcolor{keywordtype}{bool} result = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00021}00021     \textcolor{keywordtype}{int} number = 10;}
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00022}00022     \textcolor{keywordtype}{bool} found = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00023}00023     \textcolor{keywordflow}{while} (\textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00024}00024     \{}
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00025}00025         found = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00026}00026         number++;}
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00027}00027         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 2; i <= range; i++)}
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00028}00028             \textcolor{keywordflow}{if} (number \% i != 0) found = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00029}00029          }
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00030}00030         \textcolor{keywordflow}{if} (found == \textcolor{keyword}{true}) }
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00031}00031             \textcolor{keywordflow}{return} number;}
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00032}00032     \}}
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00033}00033     \textcolor{keywordflow}{return} number;}
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00035}00035 \}}
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00038}\mbox{\hyperlink{_problem-5_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00038}} \textcolor{keywordtype}{int} \mbox{\hyperlink{_problem-5_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00039}00039 \{}
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00041}00041     assert(\mbox{\hyperlink{_problem-5_8cpp_a19d2ca94bfdd002b079d50626596c164}{findSmallDivisbile}}(10) == 2520);}
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00043}00043     cout << endl << }
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00044}00044         \textcolor{stringliteral}{"{}the smallest positive number that is evenly divisible by all of the numbers from 1 to 20 :  "{}} }
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00045}00045         << \mbox{\hyperlink{_problem-5_8cpp_a19d2ca94bfdd002b079d50626596c164}{findSmallDivisbile}}(20) << endl;}
+\DoxyCodeLine{\Hypertarget{_problem-5_8cpp_source_l00046}00046 \}}
+
+\end{DoxyCode}

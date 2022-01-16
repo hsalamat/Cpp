@@ -1,0 +1,56 @@
+\hypertarget{_problem-7_8cpp_source}{}\doxysection{Problem-\/7.cpp}
+\label{_problem-7_8cpp_source}\index{Bootcamp/ProjectEuler/Problem-\/7.cpp@{Bootcamp/ProjectEuler/Problem-\/7.cpp}}
+\mbox{\hyperlink{_problem-7_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00010}00010 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00012}00012 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00013}00013 \textcolor{preprocessor}{\#include <cassert>}}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00014}00014 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00017}\mbox{\hyperlink{_problem-7_8cpp_a0f0d38e38549c02b27672fd35dd7465f}{00017}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{_problem-7_8cpp_a0f0d38e38549c02b27672fd35dd7465f}{isPrime}}(\textcolor{keywordtype}{int} number)}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00018}00018 \{}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00019}00019     \textcolor{keywordtype}{bool} result = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00021}00021     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 2; i < number; i++)}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00022}00022         \textcolor{keywordflow}{if} (number \% i == 0) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00024}00024     \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00025}00025 \}}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00027}\mbox{\hyperlink{_problem-7_8cpp_aa9eea14440abd4957132cc301a7f333f}{00027}} vector<long long> \mbox{\hyperlink{_problem-7_8cpp_aa9eea14440abd4957132cc301a7f333f}{findPrimes}}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} index)}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00028}00028 \{}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00029}00029     vector<long long> pFactors;}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00030}00030     \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00032}00032     \textcolor{keywordtype}{int} number = 2;}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00033}00033     \textcolor{keywordflow}{do}}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00034}00034     \{}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00035}00035         \textcolor{keywordflow}{if} (\mbox{\hyperlink{_problem-7_8cpp_a0f0d38e38549c02b27672fd35dd7465f}{isPrime}}(number))}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00036}00036         \{}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00037}00037             pFactors.push\_back(number);}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00038}00038             i++;}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00039}00039         \}}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00041}00041         number++;}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00042}00042     \} \textcolor{keywordflow}{while} (i < index);}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00044}00044     \textcolor{keywordflow}{return} pFactors;}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00045}00045 \}}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00046}\mbox{\hyperlink{_problem-7_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00046}} \textcolor{keywordtype}{int} \mbox{\hyperlink{_problem-7_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00047}00047 \{}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00048}00048     vector<long long> pTest = \mbox{\hyperlink{_problem-7_8cpp_aa9eea14440abd4957132cc301a7f333f}{findPrimes}}(6);}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00049}00049     assert(pTest[5] == 13);}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00051}00051     vector<long long> p10001 = \mbox{\hyperlink{_problem-7_8cpp_aa9eea14440abd4957132cc301a7f333f}{findPrimes}}(10001);}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00052}00052     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} p : p10001)}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00053}00053     \{}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00054}00054         cout << p << \textcolor{stringliteral}{"{}, "{}} << endl;}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00055}00055     \}}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00057}00057     cout << endl << \textcolor{stringliteral}{"{}The 10001st prime number : "{}} << p10001[10000] << endl;}
+\DoxyCodeLine{\Hypertarget{_problem-7_8cpp_source_l00058}00058 \}}
+
+\end{DoxyCode}

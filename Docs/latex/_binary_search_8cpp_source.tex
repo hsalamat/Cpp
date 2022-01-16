@@ -1,0 +1,113 @@
+\hypertarget{_binary_search_8cpp_source}{}\doxysection{Binary\+Search.\+cpp}
+\label{_binary_search_8cpp_source}\index{Bootcamp/Algorithms/BinarySearch.cpp@{Bootcamp/Algorithms/BinarySearch.cpp}}
+\mbox{\hyperlink{_binary_search_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00011}00011  \textcolor{comment}{// C++ program to implement recursive Binary Search}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00012}00012 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00013}00013 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00015}00015 \textcolor{comment}{// A recursive binary search function. It returns}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00016}00016 \textcolor{comment}{// location of x in given array arr[l..r] is present,}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00017}00017 \textcolor{comment}{// otherwise -\/1}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00018}\mbox{\hyperlink{_binary_search_8cpp_a34eda62409e5be674ade1f6e5805bb00}{00018}} \textcolor{keywordtype}{int} \mbox{\hyperlink{_binary_search_8cpp_a34eda62409e5be674ade1f6e5805bb00}{binarySearch}}(\textcolor{keywordtype}{int} arr[], \textcolor{keywordtype}{int} l, \textcolor{keywordtype}{int} r, \textcolor{keywordtype}{int} x)}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00019}00019 \{}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00020}00020     \textcolor{keywordflow}{if} (r >= l) \{}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00021}00021         \textcolor{keywordtype}{int} mid = l + (r -\/ l) / 2;}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00023}00023         \textcolor{comment}{// If the element is present at the middle}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00024}00024         \textcolor{comment}{// itself}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00025}00025         \textcolor{keywordflow}{if} (arr[mid] == x)}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00026}00026             \textcolor{keywordflow}{return} mid;}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00028}00028         \textcolor{comment}{// If element is smaller than mid, then}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00029}00029         \textcolor{comment}{// it can only be present in left subarray}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00030}00030         \textcolor{keywordflow}{if} (arr[mid] > x)}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00031}00031             \textcolor{keywordflow}{return} \mbox{\hyperlink{_binary_search_8cpp_a34eda62409e5be674ade1f6e5805bb00}{binarySearch}}(arr, l, mid -\/ 1, x);}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00033}00033         \textcolor{comment}{// Else the element can only be present}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00034}00034         \textcolor{comment}{// in right subarray}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00035}00035         \textcolor{keywordflow}{return} \mbox{\hyperlink{_binary_search_8cpp_a34eda62409e5be674ade1f6e5805bb00}{binarySearch}}(arr, mid + 1, r, x);}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00036}00036     \}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00038}00038     \textcolor{comment}{// We reach here when element is not}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00039}00039     \textcolor{comment}{// present in array}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00040}00040     \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00041}00041 \}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00044}00044 \textcolor{comment}{// define array globally}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00045}\mbox{\hyperlink{_binary_search_8cpp_ab2b6b0c222cd1ce70d6a831f57241e59}{00045}} \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{_binary_search_8cpp_ab2b6b0c222cd1ce70d6a831f57241e59}{N}} = 1e6 + 4;}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00047}\mbox{\hyperlink{_binary_search_8cpp_a34eebba7303340e07cd8fc27ff9aed3e}{00047}} \textcolor{keywordtype}{int} \mbox{\hyperlink{_binary_search_8cpp_a34eebba7303340e07cd8fc27ff9aed3e}{a}}[\mbox{\hyperlink{_binary_search_8cpp_ab2b6b0c222cd1ce70d6a831f57241e59}{N}}];}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00048}\mbox{\hyperlink{_binary_search_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{00048}} \textcolor{keywordtype}{int} \mbox{\hyperlink{_binary_search_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}; \textcolor{comment}{// array size}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00050}00050 \textcolor{comment}{// element to be searched in array}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00051}\mbox{\hyperlink{_binary_search_8cpp_ab66ed8e0098c0a86b458672a55a9cca9}{00051}} \textcolor{keywordtype}{int} \mbox{\hyperlink{_binary_search_8cpp_ab66ed8e0098c0a86b458672a55a9cca9}{k}};}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00053}\mbox{\hyperlink{_binary_search_8cpp_a84c44bb1fc841206a1bee5e09f7a811f}{00053}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{_binary_search_8cpp_a84c44bb1fc841206a1bee5e09f7a811f}{check}}(\textcolor{keywordtype}{int} dig)}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00054}00054 \{}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00055}00055     \textcolor{comment}{// element at dig position in array}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00056}00056     \textcolor{keywordtype}{int} ele = \mbox{\hyperlink{_binary_search_8cpp_a34eebba7303340e07cd8fc27ff9aed3e}{a}}[dig];}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00058}00058     \textcolor{comment}{// if k is less than}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00059}00059     \textcolor{comment}{// element at dig position}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00060}00060     \textcolor{comment}{// then we need to bring our higher ending to dig}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00061}00061     \textcolor{comment}{// and then continue further}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00062}00062     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_binary_search_8cpp_ab66ed8e0098c0a86b458672a55a9cca9}{k}} <= ele) \{}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00063}00063         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00064}00064     \}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00065}00065     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00066}00066         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00067}00067     \}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00068}00068 \}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00069}\mbox{\hyperlink{_binary_search_8cpp_a654793382b923cc9ec5e27aa556799a8}{00069}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_binary_search_8cpp_a654793382b923cc9ec5e27aa556799a8}{binsrch}}(\textcolor{keywordtype}{int} lo, \textcolor{keywordtype}{int} hi)}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00070}00070 \{}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00071}00071     \textcolor{keywordflow}{while} (lo < hi) \{}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00072}00072         \textcolor{keywordtype}{int} mid = (lo + hi) / 2;}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00073}00073         \textcolor{keywordflow}{if} (\mbox{\hyperlink{_binary_search_8cpp_a84c44bb1fc841206a1bee5e09f7a811f}{check}}(mid)) \{}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00074}00074             hi = mid;}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00075}00075         \}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00076}00076         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00077}00077             lo = mid + 1;}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00078}00078         \}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00079}00079     \}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00080}00080     \textcolor{comment}{// if a[lo] is k}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00081}00081     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_binary_search_8cpp_a34eebba7303340e07cd8fc27ff9aed3e}{a}}[lo] == \mbox{\hyperlink{_binary_search_8cpp_ab66ed8e0098c0a86b458672a55a9cca9}{k}})}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00082}00082         cout << \textcolor{stringliteral}{"{}Element found at index "{}}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00083}00083         << lo; \textcolor{comment}{// 0 based indexing}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00084}00084     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00085}00085         cout}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00086}00086         << \textcolor{stringliteral}{"{}Element doesnt exist in array"{}}; \textcolor{comment}{// element}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00087}00087                                             \textcolor{comment}{// was not in}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00088}00088                                             \textcolor{comment}{// our array}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00089}00089 \}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00091}\mbox{\hyperlink{_binary_search_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{00091}} \textcolor{keywordtype}{int} \mbox{\hyperlink{_binary_search_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00092}00092 \{}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00093}00093     \textcolor{keywordtype}{int} arr[] = \{ 2, 3, 4, 10, 40 \};}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00094}00094     \textcolor{keywordtype}{int} x = 10;}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00095}00095     \textcolor{keywordtype}{int} \mbox{\hyperlink{_binary_search_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}} = \textcolor{keyword}{sizeof}(arr) / \textcolor{keyword}{sizeof}(arr[0]);}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00096}00096     \textcolor{keywordtype}{int} result = \mbox{\hyperlink{_binary_search_8cpp_a34eda62409e5be674ade1f6e5805bb00}{binarySearch}}(arr, 0, \mbox{\hyperlink{_binary_search_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}} -\/ 1, x);}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00097}00097     (result == -\/1)}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00098}00098         ? cout << \textcolor{stringliteral}{"{}Element is not present in array"{}}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00099}00099         : cout << \textcolor{stringliteral}{"{}Element is present at index "{}} << result;}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00101}00101     cout << endl << \textcolor{stringliteral}{"{}enter n elements: "{}} << endl;}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00102}00102     cin >> \mbox{\hyperlink{_binary_search_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}};}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00103}00103     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{_binary_search_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}; i++) \{}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00104}00104         cin >> \mbox{\hyperlink{_binary_search_8cpp_a34eebba7303340e07cd8fc27ff9aed3e}{a}}[i];}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00105}00105     \}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00106}00106     cin >> \mbox{\hyperlink{_binary_search_8cpp_ab66ed8e0098c0a86b458672a55a9cca9}{k}};}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00107}00107 }
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00108}00108     \textcolor{comment}{// it is being given array is sorted}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00109}00109     \textcolor{comment}{// if not then we have to sort it}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00111}00111     \textcolor{comment}{// minimum possible point where our k can be is starting}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00112}00112     \textcolor{comment}{// index so lo=0 also k cannot be outside of array so end}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00113}00113     \textcolor{comment}{// point hi=n}}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00114}00114 }
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00115}00115     \mbox{\hyperlink{_binary_search_8cpp_a654793382b923cc9ec5e27aa556799a8}{binsrch}}(0, \mbox{\hyperlink{_binary_search_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}});}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00116}00116     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{_binary_search_8cpp_source_l00117}00117 \}}
+
+\end{DoxyCode}

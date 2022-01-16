@@ -1,0 +1,114 @@
+\hypertarget{promotion_prize_demo-_solution_8cpp_source}{}\doxysection{promotion\+Prize\+Demo-\/\+Solution.cpp}
+\label{promotion_prize_demo-_solution_8cpp_source}\index{Bootcamp/Demos/promotionPrizeDemo-\/Solution.cpp@{Bootcamp/Demos/promotionPrizeDemo-\/Solution.cpp}}
+\mbox{\hyperlink{promotion_prize_demo-_solution_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00088}00088 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00089}00089 \textcolor{preprocessor}{\#include <algorithm>}    \textcolor{comment}{// std::find\_if}}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00090}00090 \textcolor{preprocessor}{\#include <functional>}   \textcolor{comment}{// std::not1}}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00091}00091 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00092}00092 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00093}00093 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00101}\mbox{\hyperlink{promotion_prize_demo-_solution_8cpp_ad96543382faef153388cb0db5e1503e4}{00101}} \textcolor{keywordtype}{int} \mbox{\hyperlink{promotion_prize_demo-_solution_8cpp_ad96543382faef153388cb0db5e1503e4}{foo}}(vector <string> codeList, vector<string>  shoppingCart)}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00102}00102 \{}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00103}00103     \textcolor{comment}{//to test}}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00104}00104     \textcolor{comment}{//codeList = \{ "{}group4"{}, "{}group4"{}, "{}group3"{}, "{}anything"{}, "{}group3"{}\};}}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00105}00105     \textcolor{comment}{//shoppingCart = \{ "{}group3"{}, "{}group4"{}, "{}group4"{}, "{}group3"{}, "{}group1"{}, "{}group3"{} \};}}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00107}00107     \textcolor{keywordtype}{int} codeListIndex = 0;}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00108}00108     \textcolor{keywordtype}{int} shoppingCartIndex = 0;}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00109}00109     \textcolor{keywordtype}{int} matchIndex = 0;}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00110}00110     \textcolor{keywordtype}{int} output = 0;}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00111}00111 }
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00112}00112     \textcolor{keywordtype}{int} g1Elements, g2Elements;}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00113}00113     std::cout << \textcolor{stringliteral}{"{}Please , enter the number of first group elements in the codeList"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00114}00114     cin >> g1Elements;}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00115}00115     g2Elements = codeList.size() -\/ g1Elements;}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00116}00116 }
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00117}00117     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} item : shoppingCart)}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00118}00118     \{}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00119}00119         \textcolor{keywordflow}{if} (shoppingCart[shoppingCartIndex] == codeList[codeListIndex])}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00120}00120         \{}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00121}00121             codeListIndex++; shoppingCartIndex++; ++matchIndex;}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00122}00122             \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00123}00123         \}}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00124}00124         \textcolor{keywordflow}{if} (shoppingCart[shoppingCartIndex] != codeList[codeListIndex] \&\& codeList[codeListIndex] != \textcolor{stringliteral}{"{}anything"{}})}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00125}00125         \{}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00126}00126             \textcolor{keywordflow}{if} (codeListIndex > 0 \&\& codeListIndex < g1Elements) \textcolor{keywordflow}{break}; \textcolor{comment}{//doesn't follow the group1}}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00127}00127             \textcolor{keywordflow}{if} (codeListIndex > g1Elements \&\& codeListIndex < g2Elements) \textcolor{keywordflow}{break}; \textcolor{comment}{//doesn't follow the group2}}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00128}00128             shoppingCartIndex++; \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00129}00129         \};}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00130}00130         \textcolor{keywordflow}{if} (shoppingCart[shoppingCartIndex] != codeList[codeListIndex] \&\& codeList[codeListIndex] == \textcolor{stringliteral}{"{}anything"{}})}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00131}00131         \{}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00132}00132             codeListIndex++; shoppingCartIndex++; ++matchIndex; \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00133}00133         \};}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00134}00134 }
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00135}00135         \textcolor{keywordflow}{if} (codeListIndex >= codeList.size()) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00136}00136     \}}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00137}00137     \textcolor{keywordflow}{if} (matchIndex == codeList.size()) output = 1;}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00138}00138     \textcolor{keywordflow}{return} output;}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00139}00139 \}}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00140}00140 }
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00141}\mbox{\hyperlink{promotion_prize_demo-_solution_8cpp_aad9a52cb92d183ab17b01c5548894608}{00141}} \textcolor{keywordtype}{string} \mbox{\hyperlink{promotion_prize_demo-_solution_8cpp_aad9a52cb92d183ab17b01c5548894608}{ltrim}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& str) \{}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00142}00142     \textcolor{keywordtype}{string} s(str);}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00143}00143     s.erase(}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00144}00144         s.begin(), find\_if(s.begin(), s.end(), not1(std::ptr\_fun<int, int>(isspace)))}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00145}00145     );}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00146}00146     \textcolor{keywordflow}{return} s;}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00147}00147 \}}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00148}00148 }
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00149}\mbox{\hyperlink{promotion_prize_demo-_solution_8cpp_aea3de1fa9e849a14b95c1bfcca0a70b3}{00149}} \textcolor{keywordtype}{string} \mbox{\hyperlink{promotion_prize_demo-_solution_8cpp_aea3de1fa9e849a14b95c1bfcca0a70b3}{rtrim}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& str) \{}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00150}00150     \textcolor{keywordtype}{string} s(str);}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00151}00151     s.erase(}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00152}00152         find\_if(s.rbegin(), s.rend(), not1(ptr\_fun<int, int>(isspace))).base(), s.end()}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00153}00153     );}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00154}00154     \textcolor{keywordflow}{return} s;}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00155}00155 \}}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00156}00156 }
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00157}\mbox{\hyperlink{promotion_prize_demo-_solution_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00157}} \textcolor{keywordtype}{int} \mbox{\hyperlink{promotion_prize_demo-_solution_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00158}00158 \{}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00159}00159 }
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00160}00160     std::cout << \textcolor{stringliteral}{"{}Please, enter the number of code list items: "{}};}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00161}00161     \textcolor{keywordtype}{string} codeList\_count\_temp;}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00162}00162     getline(cin, codeList\_count\_temp);}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00163}00163 }
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00164}00164 }
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00165}00165     \textcolor{keywordtype}{int} codeList\_count = stoi(\mbox{\hyperlink{promotion_prize_demo-_solution_8cpp_aad9a52cb92d183ab17b01c5548894608}{ltrim}}(\mbox{\hyperlink{promotion_prize_demo-_solution_8cpp_aea3de1fa9e849a14b95c1bfcca0a70b3}{rtrim}}(codeList\_count\_temp)));}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00166}00166 }
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00167}00167     vector<string> codeList(codeList\_count);}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00168}00168 }
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00169}00169     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < codeList\_count; i++) \{}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00170}00170         std::cout << \textcolor{stringliteral}{"{}Please, enter the code list item ["{}} << i<< \textcolor{stringliteral}{"{}]: "{}};}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00171}00171         \textcolor{keywordtype}{string} codeList\_item;}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00172}00172         getline(cin, codeList\_item);}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00173}00173 }
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00174}00174         codeList[i] = codeList\_item;}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00175}00175     \}}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00176}00176 }
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00177}00177     std::cout << \textcolor{stringliteral}{"{}Please, enter the number of shopping card items: "{}};}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00178}00178     \textcolor{keywordtype}{string} shoppingCart\_count\_temp;}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00179}00179     getline(cin, shoppingCart\_count\_temp);}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00180}00180 }
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00181}00181     \textcolor{keywordtype}{int} shoppingCart\_count = stoi(\mbox{\hyperlink{promotion_prize_demo-_solution_8cpp_aad9a52cb92d183ab17b01c5548894608}{ltrim}}(\mbox{\hyperlink{promotion_prize_demo-_solution_8cpp_aea3de1fa9e849a14b95c1bfcca0a70b3}{rtrim}}(shoppingCart\_count\_temp)));}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00182}00182 }
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00183}00183     vector<string> shoppingCart(shoppingCart\_count);}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00184}00184 }
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00185}00185     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < shoppingCart\_count; i++) \{}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00186}00186         \textcolor{keywordtype}{string} shoppingCart\_item;}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00187}00187         std::cout << \textcolor{stringliteral}{"{}Please, enter the shopping item ["{}} << i << \textcolor{stringliteral}{"{}]: "{}};}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00188}00188         getline(cin, shoppingCart\_item);}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00189}00189 }
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00190}00190         shoppingCart[i] = shoppingCart\_item;}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00191}00191     \}}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00192}00192 }
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00193}00193 }
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00194}00194     \textcolor{keywordtype}{int} result = \mbox{\hyperlink{promotion_prize_demo-_solution_8cpp_ad96543382faef153388cb0db5e1503e4}{foo}}(codeList, shoppingCart);}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00195}00195 }
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00196}00196    }
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00197}00197     cout << result << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00198}00198 }
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00199}00199     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{promotion_prize_demo-_solution_8cpp_source_l00200}00200 \}}
+
+\end{DoxyCode}

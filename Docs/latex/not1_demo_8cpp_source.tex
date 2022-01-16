@@ -1,0 +1,23 @@
+\hypertarget{not1_demo_8cpp_source}{}\doxysection{not1\+Demo.\+cpp}
+\label{not1_demo_8cpp_source}\index{Bootcamp/Demos/not1Demo.cpp@{Bootcamp/Demos/not1Demo.cpp}}
+\mbox{\hyperlink{not1_demo_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{not1_demo_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{not1_demo_8cpp_source_l00007}00007 \textcolor{comment}{// not1 example:An unary function object with the opposite behavior of pred.}}
+\DoxyCodeLine{\Hypertarget{not1_demo_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include <iostream>}     \textcolor{comment}{// std::cout}}
+\DoxyCodeLine{\Hypertarget{not1_demo_8cpp_source_l00009}00009 \textcolor{preprocessor}{\#include <functional>}   \textcolor{comment}{// std::not1}}
+\DoxyCodeLine{\Hypertarget{not1_demo_8cpp_source_l00010}00010 \textcolor{preprocessor}{\#include <algorithm>}    \textcolor{comment}{// std::count\_if}}
+\DoxyCodeLine{\Hypertarget{not1_demo_8cpp_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{not1_demo_8cpp_source_l00012}\mbox{\hyperlink{struct_is_odd}{00012}} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_is_odd}{IsOdd}} \{}
+\DoxyCodeLine{\Hypertarget{not1_demo_8cpp_source_l00013}\mbox{\hyperlink{struct_is_odd_aa391752db2da3f72acc1d35c62d5df7f}{00013}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{struct_is_odd_aa391752db2da3f72acc1d35c62d5df7f}{operator() }}(\textcolor{keyword}{const} \textcolor{keywordtype}{int}\& x)\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} x \% 2 == 1; \}}
+\DoxyCodeLine{\Hypertarget{not1_demo_8cpp_source_l00014}\mbox{\hyperlink{struct_is_odd_ad54bf246bf23a84cfc83ad3ff893fb35}{00014}}     \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_is_odd_ad54bf246bf23a84cfc83ad3ff893fb35}{argument\_type}};}
+\DoxyCodeLine{\Hypertarget{not1_demo_8cpp_source_l00015}00015 \};}
+\DoxyCodeLine{\Hypertarget{not1_demo_8cpp_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{not1_demo_8cpp_source_l00017}\mbox{\hyperlink{not1_demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00017}} \textcolor{keywordtype}{int} \mbox{\hyperlink{not1_demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}() \{}
+\DoxyCodeLine{\Hypertarget{not1_demo_8cpp_source_l00018}00018     \textcolor{keywordtype}{int} values[] = \{ 1,2,3,4,5 \};}
+\DoxyCodeLine{\Hypertarget{not1_demo_8cpp_source_l00019}00019     \textcolor{keywordtype}{int} cx = std::count\_if(values, values + 5, std::not1(\mbox{\hyperlink{find__if_demo_8cpp_ab0c9e93c84d331feb25023862242d5ce}{IsOdd}}()));}
+\DoxyCodeLine{\Hypertarget{not1_demo_8cpp_source_l00020}00020     std::cout << \textcolor{stringliteral}{"{}There are "{}} << cx << \textcolor{stringliteral}{"{} elements with even values.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{not1_demo_8cpp_source_l00021}00021     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{not1_demo_8cpp_source_l00022}00022 \}}
+
+\end{DoxyCode}

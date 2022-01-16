@@ -1,0 +1,43 @@
+\hypertarget{stoi_demo_8cpp_source}{}\doxysection{stoi\+Demo.\+cpp}
+\label{stoi_demo_8cpp_source}\index{Bootcamp/Demos/stoiDemo.cpp@{Bootcamp/Demos/stoiDemo.cpp}}
+\mbox{\hyperlink{stoi_demo_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00007}00007 \textcolor{preprocessor}{\#include <iostream>}   \textcolor{comment}{// std::cout}}
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include <string>}     \textcolor{comment}{// std::string, std::stoi}}
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00010}\mbox{\hyperlink{stoi_demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00010}} \textcolor{keywordtype}{int} \mbox{\hyperlink{stoi_demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00011}00011 \{}
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00012}00012     std::string str\_dec = \textcolor{stringliteral}{"{}2001, A Space Odyssey"{}};}
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00013}00013     std::string str\_hex = \textcolor{stringliteral}{"{}40c3"{}};}
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00014}00014     std::string str\_bin = \textcolor{stringliteral}{"{}-\/10010110001"{}};}
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00015}00015     std::string str\_auto = \textcolor{stringliteral}{"{}0x7f"{}};}
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00017}00017     std::string::size\_type sz;   \textcolor{comment}{// alias of size\_t}}
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00019}00019     \textcolor{keywordtype}{int} i\_dec = std::stoi(str\_dec, \&sz);}
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00020}00020     \textcolor{keywordtype}{int} i\_hex = std::stoi(str\_hex, \textcolor{keyword}{nullptr}, 16);}
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00021}00021     \textcolor{keywordtype}{int} i\_bin = std::stoi(str\_bin, \textcolor{keyword}{nullptr}, 2);}
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00022}00022     \textcolor{keywordtype}{int} i\_auto = std::stoi(str\_auto, \textcolor{keyword}{nullptr}, 0);}
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00024}00024     std::cout << str\_dec << \textcolor{stringliteral}{"{}: "{}} << i\_dec << \textcolor{stringliteral}{"{} and ["{}} << str\_dec.substr(sz) << \textcolor{stringliteral}{"{}]\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00025}00025     std::cout << str\_hex << \textcolor{stringliteral}{"{}: "{}} << i\_hex << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00026}00026     std::cout << str\_bin << \textcolor{stringliteral}{"{}: "{}} << i\_bin << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00027}00027     std::cout << str\_auto << \textcolor{stringliteral}{"{}: "{}} << i\_auto << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00029}00029     std::string str = \textcolor{stringliteral}{"{}We think in generalities, but we live in details."{}};}
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00030}00030     \textcolor{comment}{// (quoting Alfred N. Whitehead)}}
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00032}00032     std::string str2 = str.substr(3, 5);     \textcolor{comment}{// "{}think"{}}}
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00034}00034     std::size\_t pos = str.find(\textcolor{stringliteral}{"{}live"{}});      \textcolor{comment}{// position of "{}live"{} in str}}
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00036}00036     std::string str3 = str.substr(pos);     \textcolor{comment}{// get from "{}live"{} to the end}}
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00038}00038     std::cout << str2 << \textcolor{charliteral}{' '} << str3 << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00040}00040     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00041}00041 \}}
+\DoxyCodeLine{\Hypertarget{stoi_demo_8cpp_source_l00042}00042 }
+
+\end{DoxyCode}

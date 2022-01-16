@@ -1,0 +1,97 @@
+\hypertarget{_level_order_binary_tree_traversal_8cpp}{}\doxysection{Bootcamp/\+Algorithms/\+Level\+Order\+Binary\+Tree\+Traversal.cpp File Reference}
+\label{_level_order_binary_tree_traversal_8cpp}\index{Bootcamp/Algorithms/LevelOrderBinaryTreeTraversal.cpp@{Bootcamp/Algorithms/LevelOrderBinaryTreeTraversal.cpp}}
+
+
+tree traversal Unlike linear data structures (Array, Linked List, Queues, Stacks, etc) which have only one logical way to traverse them, trees can be traversed in different ways.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classnode}{node}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_level_order_binary_tree_traversal_8cpp_aaae5f39b6810ef3d82ddf5e2770a37ac}{print\+Current\+Level}} (\mbox{\hyperlink{classnode}{node}} $\ast$root, int level)
+\item 
+int \mbox{\hyperlink{_level_order_binary_tree_traversal_8cpp_a6b8e723d09bc064c70cebc0dcc4a002c}{height}} (\mbox{\hyperlink{classnode}{node}} $\ast$\mbox{\hyperlink{classnode}{node}})
+\item 
+\mbox{\hyperlink{classnode}{node}} $\ast$ \mbox{\hyperlink{_level_order_binary_tree_traversal_8cpp_adf2169c1008551b20c4a59fcf0c9ab3b}{new\+Node}} (int data)
+\item 
+void \mbox{\hyperlink{_level_order_binary_tree_traversal_8cpp_a2c2561fedd176729ff8281d717f2fb18}{print\+Level\+Order}} (\mbox{\hyperlink{classnode}{node}} $\ast$root)
+\item 
+int \mbox{\hyperlink{_level_order_binary_tree_traversal_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+tree traversal Unlike linear data structures (Array, Linked List, Queues, Stacks, etc) which have only one logical way to traverse them, trees can be traversed in different ways. 
+
+Depth First Traversals\+: \begin{DoxyVerb}        1
+       / \ 
+      2   3
+     / \
+    4   5
+\end{DoxyVerb}
+ Breadth-\/\+First or Level Order Traversal\+: 1 2 3 4 5 \begin{DoxyVerb}@author Hooman Salamat
+@bug No known bugs.
+\end{DoxyVerb}
+ 
+
+Definition in file \mbox{\hyperlink{_level_order_binary_tree_traversal_8cpp_source}{Level\+Order\+Binary\+Tree\+Traversal.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_level_order_binary_tree_traversal_8cpp_a6b8e723d09bc064c70cebc0dcc4a002c}\label{_level_order_binary_tree_traversal_8cpp_a6b8e723d09bc064c70cebc0dcc4a002c}} 
+\index{LevelOrderBinaryTreeTraversal.cpp@{LevelOrderBinaryTreeTraversal.cpp}!height@{height}}
+\index{height@{height}!LevelOrderBinaryTreeTraversal.cpp@{LevelOrderBinaryTreeTraversal.cpp}}
+\doxysubsubsection{\texorpdfstring{height()}{height()}}
+{\footnotesize\ttfamily int height (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_level_order_binary_tree_traversal_8cpp_source_l00063}{63}} of file \mbox{\hyperlink{_level_order_binary_tree_traversal_8cpp_source}{Level\+Order\+Binary\+Tree\+Traversal.\+cpp}}.
+
+\mbox{\Hypertarget{_level_order_binary_tree_traversal_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{_level_order_binary_tree_traversal_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{LevelOrderBinaryTreeTraversal.cpp@{LevelOrderBinaryTreeTraversal.cpp}!main@{main}}
+\index{main@{main}!LevelOrderBinaryTreeTraversal.cpp@{LevelOrderBinaryTreeTraversal.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_level_order_binary_tree_traversal_8cpp_source_l00096}{96}} of file \mbox{\hyperlink{_level_order_binary_tree_traversal_8cpp_source}{Level\+Order\+Binary\+Tree\+Traversal.\+cpp}}.
+
+\mbox{\Hypertarget{_level_order_binary_tree_traversal_8cpp_adf2169c1008551b20c4a59fcf0c9ab3b}\label{_level_order_binary_tree_traversal_8cpp_adf2169c1008551b20c4a59fcf0c9ab3b}} 
+\index{LevelOrderBinaryTreeTraversal.cpp@{LevelOrderBinaryTreeTraversal.cpp}!newNode@{newNode}}
+\index{newNode@{newNode}!LevelOrderBinaryTreeTraversal.cpp@{LevelOrderBinaryTreeTraversal.cpp}}
+\doxysubsubsection{\texorpdfstring{newNode()}{newNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode}{node}} $\ast$ new\+Node (\begin{DoxyParamCaption}\item[{int}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_level_order_binary_tree_traversal_8cpp_source_l00085}{85}} of file \mbox{\hyperlink{_level_order_binary_tree_traversal_8cpp_source}{Level\+Order\+Binary\+Tree\+Traversal.\+cpp}}.
+
+\mbox{\Hypertarget{_level_order_binary_tree_traversal_8cpp_aaae5f39b6810ef3d82ddf5e2770a37ac}\label{_level_order_binary_tree_traversal_8cpp_aaae5f39b6810ef3d82ddf5e2770a37ac}} 
+\index{LevelOrderBinaryTreeTraversal.cpp@{LevelOrderBinaryTreeTraversal.cpp}!printCurrentLevel@{printCurrentLevel}}
+\index{printCurrentLevel@{printCurrentLevel}!LevelOrderBinaryTreeTraversal.cpp@{LevelOrderBinaryTreeTraversal.cpp}}
+\doxysubsubsection{\texorpdfstring{printCurrentLevel()}{printCurrentLevel()}}
+{\footnotesize\ttfamily void print\+Current\+Level (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}} $\ast$}]{root,  }\item[{int}]{level }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_level_order_binary_tree_traversal_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{_level_order_binary_tree_traversal_8cpp_source}{Level\+Order\+Binary\+Tree\+Traversal.\+cpp}}.
+
+\mbox{\Hypertarget{_level_order_binary_tree_traversal_8cpp_a2c2561fedd176729ff8281d717f2fb18}\label{_level_order_binary_tree_traversal_8cpp_a2c2561fedd176729ff8281d717f2fb18}} 
+\index{LevelOrderBinaryTreeTraversal.cpp@{LevelOrderBinaryTreeTraversal.cpp}!printLevelOrder@{printLevelOrder}}
+\index{printLevelOrder@{printLevelOrder}!LevelOrderBinaryTreeTraversal.cpp@{LevelOrderBinaryTreeTraversal.cpp}}
+\doxysubsubsection{\texorpdfstring{printLevelOrder()}{printLevelOrder()}}
+{\footnotesize\ttfamily void print\+Level\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}} $\ast$}]{root }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_level_order_binary_tree_traversal_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{_level_order_binary_tree_traversal_8cpp_source}{Level\+Order\+Binary\+Tree\+Traversal.\+cpp}}.
+

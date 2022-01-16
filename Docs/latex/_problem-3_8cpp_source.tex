@@ -1,0 +1,42 @@
+\hypertarget{_problem-3_8cpp_source}{}\doxysection{Problem-\/3.cpp}
+\label{_problem-3_8cpp_source}\index{Bootcamp/ProjectEuler/Problem-\/3.cpp@{Bootcamp/ProjectEuler/Problem-\/3.cpp}}
+\mbox{\hyperlink{_problem-3_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00027}00027 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00028}00028 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00029}00029 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00030}00030 \textcolor{preprocessor}{\#include <cassert>}}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00031}00031 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00034}\mbox{\hyperlink{_problem-3_8cpp_afc526d3f872199eeb8cd6b4fad55ce83}{00034}} vector<long long> \mbox{\hyperlink{_problem-3_8cpp_afc526d3f872199eeb8cd6b4fad55ce83}{findPrimeFactors}}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} number)}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00035}00035 \{}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00036}00036     vector<long long> pFactors;}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00037}00037     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{long} i = 2; i <= number; i++)}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00038}00038     \{}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00039}00039         \textcolor{keywordflow}{if} (number \% i == 0)}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00040}00040         \{}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00041}00041             pFactors.push\_back(i);}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00042}00042             number /= i;}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00043}00043             \textcolor{keywordflow}{while} (number \% i == 0)}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00044}00044                 number /= i;}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00045}00045         \}}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00046}00046     \}}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00047}00047     \textcolor{keywordflow}{return} pFactors;}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00048}00048 \}}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00049}\mbox{\hyperlink{_problem-3_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00049}} \textcolor{keywordtype}{int} \mbox{\hyperlink{_problem-3_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00050}00050 \{}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00051}00051     vector<long long> pFactorsTest = \mbox{\hyperlink{_problem-3_8cpp_afc526d3f872199eeb8cd6b4fad55ce83}{findPrimeFactors}}(13195);}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00052}00052     assert(*max\_element(pFactorsTest.begin(), pFactorsTest.end()) == 29);}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00054}00054     vector<long long> pFactors = \mbox{\hyperlink{_problem-3_8cpp_afc526d3f872199eeb8cd6b4fad55ce83}{findPrimeFactors}}(600851475143);}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00055}00055     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} p : pFactors)}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00056}00056     \{}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00057}00057         cout << p << \textcolor{stringliteral}{"{}, "{}} << endl;}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00058}00058     \}}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00060}00060     cout << endl << \textcolor{stringliteral}{"{}the maximum prime factor is "{}} << *max\_element(pFactors.begin(), pFactors.end()) << endl;}
+\DoxyCodeLine{\Hypertarget{_problem-3_8cpp_source_l00061}00061 \}}
+
+\end{DoxyCode}

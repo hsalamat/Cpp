@@ -1,0 +1,79 @@
+\hypertarget{_problem-8_8cpp_source}{}\doxysection{Problem-\/8.cpp}
+\label{_problem-8_8cpp_source}\index{Bootcamp/ProjectEuler/Problem-\/8.cpp@{Bootcamp/ProjectEuler/Problem-\/8.cpp}}
+\mbox{\hyperlink{_problem-8_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00031}00031 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00032}00032 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00033}00033 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00034}00034 \textcolor{preprocessor}{\#include <cassert>}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00035}00035 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00036}00036 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00038}\mbox{\hyperlink{_problem-8_8cpp_aef8363c91af925e74cc340e533f3002d}{00038}} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \mbox{\hyperlink{_problem-8_8cpp_aef8363c91af925e74cc340e533f3002d}{findxadjacentdigits}}(\textcolor{keywordtype}{string} str\_number, \textcolor{keywordtype}{int} adjacentDigits)}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00039}00039 \{}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00040}00040     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long}  max = 0;}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00041}00041     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} temp;}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00042}00042     \textcolor{keywordtype}{char} \textcolor{keyword}{const}* char\_number = str\_number.c\_str();}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00043}00043     \textcolor{keywordtype}{int}* max\_number = \textcolor{keyword}{new} int(adjacentDigits);}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00044}00044     \textcolor{keywordtype}{int} indexMax = 0;}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00046}00046     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i <= str\_number.length() -\/ adjacentDigits -\/ 1; i++)}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00047}00047     \{}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00048}00048         temp = 1;}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00049}00049         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < adjacentDigits; j++)}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00050}00050         \{}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00051}00051             max\_number[j] = char\_number[i + j] -\/ \textcolor{charliteral}{'0'};}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00052}00052             temp *= max\_number[j];}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00053}00053         \}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00054}00054         \textcolor{keywordflow}{if} (temp > max) \{}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00055}00055             max = temp;}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00056}00056             indexMax = i;}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00057}00057         \}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00058}00058     \}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00060}00060     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < adjacentDigits; j++)}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00061}00061     \{}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00062}00062         cout << char\_number[indexMax + j];}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00063}00063     \}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00064}00064         }
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00065}00065     cout << endl;}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00067}00067     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00069}00069 \}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00071}\mbox{\hyperlink{_problem-8_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00071}} \textcolor{keywordtype}{int} \mbox{\hyperlink{_problem-8_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00072}00072 \{}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00074}00074     \textcolor{keywordtype}{string} str\_number= }
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00075}00075         \textcolor{stringliteral}{"{}73167176531330624919225119674426574742355349194934"{}}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00076}00076         \textcolor{stringliteral}{"{}96983520312774506326239578318016984801869478851843"{}}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00077}00077         \textcolor{stringliteral}{"{}85861560789112949495459501737958331952853208805511"{}}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00078}00078         \textcolor{stringliteral}{"{}12540698747158523863050715693290963295227443043557"{}}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00079}00079         \textcolor{stringliteral}{"{}66896648950445244523161731856403098711121722383113"{}}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00080}00080         \textcolor{stringliteral}{"{}62229893423380308135336276614282806444486645238749"{}}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00081}00081         \textcolor{stringliteral}{"{}30358907296290491560440772390713810515859307960866"{}}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00082}00082         \textcolor{stringliteral}{"{}70172427121883998797908792274921901699720888093776"{}}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00083}00083         \textcolor{stringliteral}{"{}65727333001053367881220235421809751254540594752243"{}}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00084}00084         \textcolor{stringliteral}{"{}52584907711670556013604839586446706324415722155397"{}}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00085}00085         \textcolor{stringliteral}{"{}53697817977846174064955149290862569321978468622482"{}}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00086}00086         \textcolor{stringliteral}{"{}83972241375657056057490261407972968652414535100474"{}}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00087}00087         \textcolor{stringliteral}{"{}82166370484403199890008895243450658541227588666881"{}}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00088}00088         \textcolor{stringliteral}{"{}16427171479924442928230863465674813919123162824586"{}}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00089}00089         \textcolor{stringliteral}{"{}17866458359124566529476545682848912883142607690042"{}}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00090}00090         \textcolor{stringliteral}{"{}24219022671055626321111109370544217506941658960408"{}}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00091}00091         \textcolor{stringliteral}{"{}07198403850962455444362981230987879927244284909188"{}}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00092}00092         \textcolor{stringliteral}{"{}84580156166097919133875499200524063689912560717606"{}}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00093}00093         \textcolor{stringliteral}{"{}05886116467109405077541002256983155200055935729725"{}}}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00094}00094         \textcolor{stringliteral}{"{}71636269561882670428252483600823257530420752963450"{}};}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00096}00096     assert(\mbox{\hyperlink{_problem-8_8cpp_aef8363c91af925e74cc340e533f3002d}{findxadjacentdigits}}(str\_number, 4) == 5832);}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00098}00098     cout << endl << \textcolor{stringliteral}{"{}the thirteen adjacent digits in the 1000-\/digit number that have the greatest product : "{}} << \mbox{\hyperlink{_problem-8_8cpp_aef8363c91af925e74cc340e533f3002d}{findxadjacentdigits}}(str\_number, 13);}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00099}00099        }
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00101}00101     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{_problem-8_8cpp_source_l00102}00102 \}}
+
+\end{DoxyCode}

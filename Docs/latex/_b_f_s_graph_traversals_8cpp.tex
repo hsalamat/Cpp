@@ -1,0 +1,74 @@
+\hypertarget{_b_f_s_graph_traversals_8cpp}{}\doxysection{Bootcamp/\+Algorithms/\+BFSGraph\+Traversals.cpp File Reference}
+\label{_b_f_s_graph_traversals_8cpp}\index{Bootcamp/Algorithms/BFSGraphTraversals.cpp@{Bootcamp/Algorithms/BFSGraphTraversals.cpp}}
+
+
+graph tree traversal -\/ Breadth First Search (BFS) A standard BFS implementation puts each vertex of the graph into one of two categories\+:  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_graph}{Graph}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_b_f_s_graph_traversals_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+graph tree traversal -\/ Breadth First Search (BFS) A standard BFS implementation puts each vertex of the graph into one of two categories\+: 
+
+Visited Not Visited The purpose of the algorithm is to mark each vertex as visited while avoiding cycles.
+
+The algorithm works as follows\+:
+
+Start by putting any one of the graph\textquotesingle{}s vertices at the back of a queue. Take the front item of the queue and add it to the visited list. Create a list of that vertex\textquotesingle{}s adjacent nodes. Add the ones which aren\textquotesingle{}t in the visited list to the back of the queue. Keep repeating steps 2 and 3 until the queue is empty. The graph might have two different disconnected parts so to make sure that we cover every vertex, we can also run the BFS algorithm on every node
+
+BFS Algorithm Applications To build index by search index For GPS navigation Path finding algorithms In Ford-\/\+Fulkerson algorithm to find maximum flow in a network Cycle detection in an undirected graph In minimum spanning tree
+
+
+\begin{DoxyEnumerate}
+\item BFS stands for Breadth First Search. DFS stands for Depth First Search.
+\item BFS(\+Breadth First Search) uses Queue data structure for finding the shortest path. DFS(\+Depth First Search) uses Stack data structure.
+\item BFS can be used to find single source shortest path in an unweighted graph, because in BFS, we reach a vertex with minimum number of edges from a source vertex. In DFS, we might traverse through more edges to reach a destination vertex from a source.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item BFS is more suitable for searching vertices which are closer to the given source. DFS is more suitable when there are solutions away from source.
+\item BFS considers all neighbors first and therefore not suitable for decision making trees used in games or puzzles. DFS is more suitable for game or puzzle problems. We make a decision, then explore all paths through this decision. And if this decision leads to win situation, we stop.
+\item The Time complexity of BFS is O(V + E) when Adjacency List is used and O(\+V$^\wedge$2) when Adjacency Matrix is used, where V stands for vertices and E stands for edges. The Time complexity of DFS is also O(V + E) when Adjacency List is used and O(\+V$^\wedge$2) when Adjacency Matrix is used, where V stands for vertices and E stands for edges.
+\end{DoxyEnumerate}
+
+Vector\+: Vector is a type of dynamic array which has the ability to resize automatically after insertion or deletion of elements. The elements in vector are placed in contiguous storage so that they can be accessed and traversed using iterators. Element is inserted at the end of the vector. Example\+:
+
+vector v; v.\+insert(5); v.\+delete();
+
+List\+: List is a double linked sequence that supports both forward and backward traversal. The time taken in the insertion and deletion in the beginning, end and middle is constant. It has the non-\/contiguous memory and there is no pre-\/allocated memory. Example\+:
+
+list l; l.\+insert\+\_\+begin(5); l.\+delete\+\_\+end();
+
+\begin{DoxyAuthor}{Author}
+Hooman Salamat 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000004}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+Definition in file \mbox{\hyperlink{_b_f_s_graph_traversals_8cpp_source}{BFSGraph\+Traversals.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_b_f_s_graph_traversals_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{_b_f_s_graph_traversals_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{BFSGraphTraversals.cpp@{BFSGraphTraversals.cpp}!main@{main}}
+\index{main@{main}!BFSGraphTraversals.cpp@{BFSGraphTraversals.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_b_f_s_graph_traversals_8cpp_source_l00111}{111}} of file \mbox{\hyperlink{_b_f_s_graph_traversals_8cpp_source}{BFSGraph\+Traversals.\+cpp}}.
+

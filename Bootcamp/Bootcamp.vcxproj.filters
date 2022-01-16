@@ -138,5 +138,8 @@
     <ClCompile Include="Demos\passbyDemo.cpp">
       <Filter>Source Files\Demos</Filter>
     </ClCompile>
+    <ClCompile Include="Demos\castingDemo.cpp">
+      <Filter>Source Files\Demos</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

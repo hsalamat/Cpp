@@ -1,0 +1,135 @@
+\hypertarget{_binary_search_8cpp}{}\doxysection{Bootcamp/\+Algorithms/\+Binary\+Search.cpp File Reference}
+\label{_binary_search_8cpp}\index{Bootcamp/Algorithms/BinarySearch.cpp@{Bootcamp/Algorithms/BinarySearch.cpp}}
+
+
+Problem\+: Binary Search\+: Search a sorted array by repeatedly dividing the search interval in half.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_binary_search_8cpp_a34eda62409e5be674ade1f6e5805bb00}{binary\+Search}} (int arr\mbox{[}$\,$\mbox{]}, int l, int r, int x)
+\item 
+bool \mbox{\hyperlink{_binary_search_8cpp_a84c44bb1fc841206a1bee5e09f7a811f}{check}} (int dig)
+\item 
+void \mbox{\hyperlink{_binary_search_8cpp_a654793382b923cc9ec5e27aa556799a8}{binsrch}} (int lo, int hi)
+\item 
+int \mbox{\hyperlink{_binary_search_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{_binary_search_8cpp_ab2b6b0c222cd1ce70d6a831f57241e59}{N}} = 1e6 + 4
+\begin{DoxyCompactList}\small\item\em Here is recursive implementation with check function which is a much easier implementation\+: \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_binary_search_8cpp_a34eebba7303340e07cd8fc27ff9aed3e}{a}} \mbox{[}\mbox{\hyperlink{_binary_search_8cpp_ab2b6b0c222cd1ce70d6a831f57241e59}{N}}\mbox{]}
+\item 
+int \mbox{\hyperlink{_binary_search_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}
+\item 
+int \mbox{\hyperlink{_binary_search_8cpp_ab66ed8e0098c0a86b458672a55a9cca9}{k}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Problem\+: Binary Search\+: Search a sorted array by repeatedly dividing the search interval in half. 
+
+~\newline
+ Begin with an interval covering the whole array. If the value of the search key is less than the item in the middle of the interval, narrow the interval to the lower half. Otherwise, narrow it to the upper half. Repeatedly check until the value is found or the interval is empty. \begin{DoxyAuthor}{Author}
+Hooman Salamat 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000005}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+Definition in file \mbox{\hyperlink{_binary_search_8cpp_source}{Binary\+Search.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_binary_search_8cpp_a34eda62409e5be674ade1f6e5805bb00}\label{_binary_search_8cpp_a34eda62409e5be674ade1f6e5805bb00}} 
+\index{BinarySearch.cpp@{BinarySearch.cpp}!binarySearch@{binarySearch}}
+\index{binarySearch@{binarySearch}!BinarySearch.cpp@{BinarySearch.cpp}}
+\doxysubsubsection{\texorpdfstring{binarySearch()}{binarySearch()}}
+{\footnotesize\ttfamily int binary\+Search (\begin{DoxyParamCaption}\item[{int}]{arr\mbox{[}$\,$\mbox{]},  }\item[{int}]{l,  }\item[{int}]{r,  }\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_binary_search_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{_binary_search_8cpp_source}{Binary\+Search.\+cpp}}.
+
+\mbox{\Hypertarget{_binary_search_8cpp_a654793382b923cc9ec5e27aa556799a8}\label{_binary_search_8cpp_a654793382b923cc9ec5e27aa556799a8}} 
+\index{BinarySearch.cpp@{BinarySearch.cpp}!binsrch@{binsrch}}
+\index{binsrch@{binsrch}!BinarySearch.cpp@{BinarySearch.cpp}}
+\doxysubsubsection{\texorpdfstring{binsrch()}{binsrch()}}
+{\footnotesize\ttfamily void binsrch (\begin{DoxyParamCaption}\item[{int}]{lo,  }\item[{int}]{hi }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_binary_search_8cpp_source_l00069}{69}} of file \mbox{\hyperlink{_binary_search_8cpp_source}{Binary\+Search.\+cpp}}.
+
+\mbox{\Hypertarget{_binary_search_8cpp_a84c44bb1fc841206a1bee5e09f7a811f}\label{_binary_search_8cpp_a84c44bb1fc841206a1bee5e09f7a811f}} 
+\index{BinarySearch.cpp@{BinarySearch.cpp}!check@{check}}
+\index{check@{check}!BinarySearch.cpp@{BinarySearch.cpp}}
+\doxysubsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily bool check (\begin{DoxyParamCaption}\item[{int}]{dig }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_binary_search_8cpp_source_l00053}{53}} of file \mbox{\hyperlink{_binary_search_8cpp_source}{Binary\+Search.\+cpp}}.
+
+\mbox{\Hypertarget{_binary_search_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\label{_binary_search_8cpp_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{BinarySearch.cpp@{BinarySearch.cpp}!main@{main}}
+\index{main@{main}!BinarySearch.cpp@{BinarySearch.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_binary_search_8cpp_source_l00091}{91}} of file \mbox{\hyperlink{_binary_search_8cpp_source}{Binary\+Search.\+cpp}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_binary_search_8cpp_a34eebba7303340e07cd8fc27ff9aed3e}\label{_binary_search_8cpp_a34eebba7303340e07cd8fc27ff9aed3e}} 
+\index{BinarySearch.cpp@{BinarySearch.cpp}!a@{a}}
+\index{a@{a}!BinarySearch.cpp@{BinarySearch.cpp}}
+\doxysubsubsection{\texorpdfstring{a}{a}}
+{\footnotesize\ttfamily int a\mbox{[}\mbox{\hyperlink{_binary_search_8cpp_ab2b6b0c222cd1ce70d6a831f57241e59}{N}}\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{_binary_search_8cpp_source_l00047}{47}} of file \mbox{\hyperlink{_binary_search_8cpp_source}{Binary\+Search.\+cpp}}.
+
+\mbox{\Hypertarget{_binary_search_8cpp_ab66ed8e0098c0a86b458672a55a9cca9}\label{_binary_search_8cpp_ab66ed8e0098c0a86b458672a55a9cca9}} 
+\index{BinarySearch.cpp@{BinarySearch.cpp}!k@{k}}
+\index{k@{k}!BinarySearch.cpp@{BinarySearch.cpp}}
+\doxysubsubsection{\texorpdfstring{k}{k}}
+{\footnotesize\ttfamily int k}
+
+
+
+Definition at line \mbox{\hyperlink{_binary_search_8cpp_source_l00051}{51}} of file \mbox{\hyperlink{_binary_search_8cpp_source}{Binary\+Search.\+cpp}}.
+
+\mbox{\Hypertarget{_binary_search_8cpp_ab2b6b0c222cd1ce70d6a831f57241e59}\label{_binary_search_8cpp_ab2b6b0c222cd1ce70d6a831f57241e59}} 
+\index{BinarySearch.cpp@{BinarySearch.cpp}!N@{N}}
+\index{N@{N}!BinarySearch.cpp@{BinarySearch.cpp}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily const int N = 1e6 + 4}
+
+
+
+Here is recursive implementation with check function which is a much easier implementation\+: 
+
+
+
+Definition at line \mbox{\hyperlink{_binary_search_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{_binary_search_8cpp_source}{Binary\+Search.\+cpp}}.
+
+\mbox{\Hypertarget{_binary_search_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}\label{_binary_search_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}} 
+\index{BinarySearch.cpp@{BinarySearch.cpp}!n@{n}}
+\index{n@{n}!BinarySearch.cpp@{BinarySearch.cpp}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily int n}
+
+
+
+Definition at line \mbox{\hyperlink{_binary_search_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{_binary_search_8cpp_source}{Binary\+Search.\+cpp}}.
+

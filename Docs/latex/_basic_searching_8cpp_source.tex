@@ -1,0 +1,85 @@
+\hypertarget{_basic_searching_8cpp_source}{}\doxysection{Basic\+Searching.\+cpp}
+\label{_basic_searching_8cpp_source}\index{Bootcamp/Algorithms/BasicSearching.cpp@{Bootcamp/Algorithms/BasicSearching.cpp}}
+\mbox{\hyperlink{_basic_searching_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00014}00014 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00015}00015 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00016}00016 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00018}\mbox{\hyperlink{_basic_searching_8cpp_a7c9b82673e7ae84d83b4b734b029fc93}{00018}} \textcolor{keywordtype}{int} \mbox{\hyperlink{_basic_searching_8cpp_a7c9b82673e7ae84d83b4b734b029fc93}{search}}(\textcolor{keywordtype}{int} arr[], \textcolor{keywordtype}{int} \mbox{\hyperlink{_binary_search_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}, \textcolor{keywordtype}{int} x)}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00019}00019 \{}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00020}00020     \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00021}00021     \textcolor{keywordflow}{for} (i = 0; i < \mbox{\hyperlink{_binary_search_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}; i++)}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00022}00022         \textcolor{keywordflow}{if} (arr[i] == x)}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00023}00023             \textcolor{keywordflow}{return} i;}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00024}00024     \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00025}00025 \}}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00032}\mbox{\hyperlink{_basic_searching_8cpp_a1ce6c310c60c0d08a380484a51c6534e}{00032}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_basic_searching_8cpp_a1ce6c310c60c0d08a380484a51c6534e}{search2}}(vector<int> arr, \textcolor{keywordtype}{int} search\_Element)}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00033}00033 \{}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00034}00034     \textcolor{keywordtype}{int} left = 0;}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00035}00035     \textcolor{keywordtype}{int} length = arr.size();}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00036}00036     \textcolor{keywordtype}{int} position = -\/1;}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00037}00037     \textcolor{keywordtype}{int} right = length -\/ 1;}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00039}00039     \textcolor{comment}{// Run loop from 0 to right}}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00040}00040     \textcolor{keywordflow}{for} (left = 0; left <= right;)}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00041}00041     \{}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00043}00043         \textcolor{comment}{// If search\_element is found with}}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00044}00044         \textcolor{comment}{// left variable}}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00045}00045         \textcolor{keywordflow}{if} (arr[left] == search\_Element)}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00046}00046         \{}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00048}00048             position = left;}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00049}00049             cout << \textcolor{stringliteral}{"{}Element found in Array at "{}}}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00050}00050                 << position + 1 << \textcolor{stringliteral}{"{} Position with "{}}}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00051}00051                 << left + 1 << \textcolor{stringliteral}{"{} Attempt"{}};}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00053}00053             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00054}00054         \}}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00056}00056         \textcolor{comment}{// If search\_element is found with}}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00057}00057         \textcolor{comment}{// right variable}}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00058}00058         \textcolor{keywordflow}{if} (arr[right] == search\_Element)}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00059}00059         \{}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00060}00060             position = right;}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00061}00061             cout << \textcolor{stringliteral}{"{}Element found in Array at "{}}}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00062}00062                 << position + 1 << \textcolor{stringliteral}{"{} Position with "{}}}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00063}00063                 << length -\/ right << \textcolor{stringliteral}{"{} Attempt"{}};}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00065}00065             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00066}00066         \}}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00067}00067         left++;}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00068}00068         right-\/-\/;}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00069}00069     \}}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00071}00071     \textcolor{comment}{// If element not found}}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00072}00072     \textcolor{keywordflow}{if} (position == -\/1)}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00073}00073         cout << \textcolor{stringliteral}{"{}Not found in Array with "{}}}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00074}00074         << left << \textcolor{stringliteral}{"{} Attempt"{}};}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00075}00075 \}}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00078}\mbox{\hyperlink{_basic_searching_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{00078}} \textcolor{keywordtype}{int} \mbox{\hyperlink{_basic_searching_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00079}00079 \{}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00080}00080     \textcolor{keywordtype}{int} arr[] = \{ 2, 3, 4, 10, 40 \};}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00081}00081     \textcolor{keywordtype}{int} x = 10;}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00082}00082     \textcolor{keywordtype}{int} \mbox{\hyperlink{_binary_search_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}} = \textcolor{keyword}{sizeof}(arr) / \textcolor{keyword}{sizeof}(arr[0]);}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00085}00085     \textcolor{keywordtype}{int} result = \mbox{\hyperlink{_basic_searching_8cpp_a7c9b82673e7ae84d83b4b734b029fc93}{search}}(arr, \mbox{\hyperlink{_binary_search_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}, x);}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00086}00086     (result == -\/1)}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00087}00087         ? cout << \textcolor{stringliteral}{"{}Element is not present in array"{}}}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00088}00088         : cout << \textcolor{stringliteral}{"{}Element is present at index "{}} << result << endl;}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00090}00090     vector<int> arr2\{ 1, 2, 3, 4, 5 \};}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00091}00091     \textcolor{keywordtype}{int} search\_element = 5;}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00094}00094     \mbox{\hyperlink{_basic_searching_8cpp_a1ce6c310c60c0d08a380484a51c6534e}{search2}}(arr2, search\_element);}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00096}00096     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{_basic_searching_8cpp_source_l00097}00097 \}}
+
+\end{DoxyCode}

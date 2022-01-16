@@ -1,0 +1,78 @@
+\hypertarget{_merge_sort_8cpp}{}\doxysection{Bootcamp/\+Algorithms/\+Merge\+Sort.cpp File Reference}
+\label{_merge_sort_8cpp}\index{Bootcamp/Algorithms/MergeSort.cpp@{Bootcamp/Algorithms/MergeSort.cpp}}
+
+
+merge sort Like Quick\+Sort, Merge Sort is a Divide and Conquer algorithm.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_merge_sort_8cpp_a16cb2ba41fd98d8061fea42ea0e99cfa}{merge}} (vector$<$ int $>$ vec, int const left, int const mid, int const right)
+\item 
+void \mbox{\hyperlink{_merge_sort_8cpp_a6af2d9e6c371495bf0cfdd2573d61f92}{merge\+Sort}} (vector$<$ int $>$ vec, int const begin, int const end)
+\item 
+void \mbox{\hyperlink{_merge_sort_8cpp_a59b72871577a437752c8cc773fa716d5}{print\+Array}} (vector$<$ int $>$ list)
+\item 
+int \mbox{\hyperlink{_merge_sort_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+merge sort Like Quick\+Sort, Merge Sort is a Divide and Conquer algorithm. 
+
+It divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves. The \mbox{\hyperlink{_merge_sort_8cpp_a16cb2ba41fd98d8061fea42ea0e99cfa}{merge()}} function is used for merging two halves. The merge(arr, l, m, r) is a key process that assumes that arr\mbox{[}l..m\mbox{]} and arr\mbox{[}m+1..r\mbox{]} are sorted and merges the two sorted sub-\/arrays into one. \begin{DoxyAuthor}{Author}
+Hooman Salamat 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000008}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+Definition in file \mbox{\hyperlink{_merge_sort_8cpp_source}{Merge\+Sort.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_merge_sort_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{_merge_sort_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{MergeSort.cpp@{MergeSort.cpp}!main@{main}}
+\index{main@{main}!MergeSort.cpp@{MergeSort.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_merge_sort_8cpp_source_l00087}{87}} of file \mbox{\hyperlink{_merge_sort_8cpp_source}{Merge\+Sort.\+cpp}}.
+
+\mbox{\Hypertarget{_merge_sort_8cpp_a16cb2ba41fd98d8061fea42ea0e99cfa}\label{_merge_sort_8cpp_a16cb2ba41fd98d8061fea42ea0e99cfa}} 
+\index{MergeSort.cpp@{MergeSort.cpp}!merge@{merge}}
+\index{merge@{merge}!MergeSort.cpp@{MergeSort.cpp}}
+\doxysubsubsection{\texorpdfstring{merge()}{merge()}}
+{\footnotesize\ttfamily void merge (\begin{DoxyParamCaption}\item[{vector$<$ int $>$}]{vec,  }\item[{int const}]{left,  }\item[{int const}]{mid,  }\item[{int const}]{right }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_merge_sort_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{_merge_sort_8cpp_source}{Merge\+Sort.\+cpp}}.
+
+\mbox{\Hypertarget{_merge_sort_8cpp_a6af2d9e6c371495bf0cfdd2573d61f92}\label{_merge_sort_8cpp_a6af2d9e6c371495bf0cfdd2573d61f92}} 
+\index{MergeSort.cpp@{MergeSort.cpp}!mergeSort@{mergeSort}}
+\index{mergeSort@{mergeSort}!MergeSort.cpp@{MergeSort.cpp}}
+\doxysubsubsection{\texorpdfstring{mergeSort()}{mergeSort()}}
+{\footnotesize\ttfamily void merge\+Sort (\begin{DoxyParamCaption}\item[{vector$<$ int $>$}]{vec,  }\item[{int const}]{begin,  }\item[{int const}]{end }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_merge_sort_8cpp_source_l00069}{69}} of file \mbox{\hyperlink{_merge_sort_8cpp_source}{Merge\+Sort.\+cpp}}.
+
+\mbox{\Hypertarget{_merge_sort_8cpp_a59b72871577a437752c8cc773fa716d5}\label{_merge_sort_8cpp_a59b72871577a437752c8cc773fa716d5}} 
+\index{MergeSort.cpp@{MergeSort.cpp}!printArray@{printArray}}
+\index{printArray@{printArray}!MergeSort.cpp@{MergeSort.cpp}}
+\doxysubsubsection{\texorpdfstring{printArray()}{printArray()}}
+{\footnotesize\ttfamily void print\+Array (\begin{DoxyParamCaption}\item[{vector$<$ int $>$}]{list }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_merge_sort_8cpp_source_l00080}{80}} of file \mbox{\hyperlink{_merge_sort_8cpp_source}{Merge\+Sort.\+cpp}}.
+

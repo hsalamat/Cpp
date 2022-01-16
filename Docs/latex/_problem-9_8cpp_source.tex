@@ -1,0 +1,47 @@
+\hypertarget{_problem-9_8cpp_source}{}\doxysection{Problem-\/9.cpp}
+\label{_problem-9_8cpp_source}\index{Bootcamp/ProjectEuler/Problem-\/9.cpp@{Bootcamp/ProjectEuler/Problem-\/9.cpp}}
+\mbox{\hyperlink{_problem-9_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00015}00015 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00016}00016 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00017}00017 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00018}00018 \textcolor{preprocessor}{\#include <cassert>}}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00019}00019 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00020}00020 \textcolor{preprocessor}{\#include <array>}}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00021}00021 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00023}\mbox{\hyperlink{_problem-9_8cpp_a940b777eb154fefbaabdf7d9874b3f0e}{00023}} array<int, 3> \mbox{\hyperlink{_problem-9_8cpp_a940b777eb154fefbaabdf7d9874b3f0e}{findPythoagoreanTriplet}}(\textcolor{keywordtype}{int} number)}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00024}00024 \{}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00026}00026     array<int, 3> triplet = \{ 0,0,0 \};}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00028}00028     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \mbox{\hyperlink{_binary_search_8cpp_a34eebba7303340e07cd8fc27ff9aed3e}{a}} = 1; \mbox{\hyperlink{_binary_search_8cpp_a34eebba7303340e07cd8fc27ff9aed3e}{a}} <= number; \mbox{\hyperlink{_binary_search_8cpp_a34eebba7303340e07cd8fc27ff9aed3e}{a}}++) \{}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00029}00029         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} b = 1; b <= number ; b++) \{}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00030}00030             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} c = 1; c <= number ; c++) \{}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00031}00031                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{_binary_search_8cpp_a34eebba7303340e07cd8fc27ff9aed3e}{a}} + b + c == number)}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00032}00032                 \{}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00033}00033                     \textcolor{keywordflow}{if} (pow(\mbox{\hyperlink{_binary_search_8cpp_a34eebba7303340e07cd8fc27ff9aed3e}{a}}, 2) + pow(b, 2) == pow(c, 2))}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00034}00034                     \{}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00035}00035                         triplet[0] = \mbox{\hyperlink{_binary_search_8cpp_a34eebba7303340e07cd8fc27ff9aed3e}{a}};}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00036}00036                         triplet[1] = b;}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00037}00037                         triplet[2] = c;}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00038}00038                         \textcolor{keywordflow}{return} triplet;}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00039}00039                     \}}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00040}00040                 \}}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00041}00041             \}}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00042}00042         \}}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00043}00043     \}}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00044}00044     \textcolor{keywordflow}{return} triplet;}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00045}00045 \}}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00047}\mbox{\hyperlink{_problem-9_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00047}} \textcolor{keywordtype}{int} \mbox{\hyperlink{_problem-9_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00048}00048 \{}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00050}00050     array<int, 3> triplet =  \mbox{\hyperlink{_problem-9_8cpp_a940b777eb154fefbaabdf7d9874b3f0e}{findPythoagoreanTriplet}}(1000);}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00051}00051        }
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00052}00052     cout << \textcolor{stringliteral}{"{}the product abc : "{}} << triplet[0] * triplet[1] * triplet[2];}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00053}00053     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{_problem-9_8cpp_source_l00054}00054 \}}
+
+\end{DoxyCode}

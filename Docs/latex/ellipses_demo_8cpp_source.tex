@@ -1,0 +1,51 @@
+\hypertarget{ellipses_demo_8cpp_source}{}\doxysection{ellipses\+Demo.\+cpp}
+\label{ellipses_demo_8cpp_source}\index{Bootcamp/Demos/ellipsesDemo.cpp@{Bootcamp/Demos/ellipsesDemo.cpp}}
+\mbox{\hyperlink{ellipses_demo_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00020}00020 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00021}00021 \textcolor{preprocessor}{\#include <cstdio>}}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00022}00022 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00023}00023 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00024}00024 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00025}00025 \textcolor{preprocessor}{\#include <cstdarg>}}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00026}00026 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00028}\mbox{\hyperlink{ellipses_demo_8cpp_a1a3c013dce584e2de201e6953b1917bc}{00028}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{ellipses_demo_8cpp_a1a3c013dce584e2de201e6953b1917bc}{checkrange}}(\textcolor{keywordtype}{int} num, ...)}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00029}00029 \{}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00030}00030     va\_list arguments;}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00032}00032     va\_start(arguments, num);}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00033}00033     \textcolor{comment}{// Sum all the inputs; we still rely on the function caller to tell us how many there are }}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00034}00034     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x = 0; x < num; x++)}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00035}00035     \{}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00036}00036         \textcolor{keywordtype}{int} arg = va\_arg(arguments, \textcolor{keywordtype}{int});}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00037}00037         \textcolor{keywordflow}{if} (arg < 1 || arg >1000)}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00038}00038             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00039}00039     \}}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00040}00040     va\_end(arguments);                  \textcolor{comment}{// Cleans up the list}}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00042}00042     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00043}00043 \}}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00045}\mbox{\hyperlink{ellipses_demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00045}} \textcolor{keywordtype}{int} \mbox{\hyperlink{ellipses_demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}() \{}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00046}00046     \textcolor{comment}{/* Enter your code here. Read input from STDIN. Print output to STDOUT */}}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00047}00047     \textcolor{keywordtype}{int} \mbox{\hyperlink{_binary_search_8cpp_a34eebba7303340e07cd8fc27ff9aed3e}{a}},b,c;}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00048}00048     \textcolor{keywordtype}{bool} running = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00049}00049     \textcolor{keywordflow}{while} (running)}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00050}00050     \{}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00051}00051         cout << \textcolor{stringliteral}{"{}please enter three integers between 1-\/1000"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00052}00052         cin >> \mbox{\hyperlink{_binary_search_8cpp_a34eebba7303340e07cd8fc27ff9aed3e}{a}} >> b >> c;}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00053}00053         \textcolor{keywordflow}{if} (\mbox{\hyperlink{ellipses_demo_8cpp_a1a3c013dce584e2de201e6953b1917bc}{checkrange}}(3, \mbox{\hyperlink{_binary_search_8cpp_a34eebba7303340e07cd8fc27ff9aed3e}{a}}, b, c))}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00054}00054         \{}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00055}00055             cout << \mbox{\hyperlink{_binary_search_8cpp_a34eebba7303340e07cd8fc27ff9aed3e}{a}} + b + c << endl;}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00056}00056             running = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00057}00057         \}}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00058}00058         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00059}00059         \{}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00060}00060             cout << \textcolor{stringliteral}{"{}The numbers must be in the range 1-\/1000. Please re-\/enter three integers between 1-\/1000"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00061}00061         \}}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00062}00062     \}}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00063}00063     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{ellipses_demo_8cpp_source_l00064}00064 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,61 @@
+\hypertarget{_depth_first_graph_tree_traversals_8cpp_source}{}\doxysection{Depth\+First\+Graph\+Tree\+Traversals.\+cpp}
+\label{_depth_first_graph_tree_traversals_8cpp_source}\index{Bootcamp/Algorithms/DepthFirstGraphTreeTraversals.cpp@{Bootcamp/Algorithms/DepthFirstGraphTreeTraversals.cpp}}
+\mbox{\hyperlink{_depth_first_graph_tree_traversals_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00053}00053  \textcolor{comment}{// C++ program for different tree traversals}}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00054}00054 \textcolor{comment}{// DFS algorithm in C++}}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00056}00056 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00057}00057 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00058}00058 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00060}00060 \textcolor{keyword}{class }\mbox{\hyperlink{class_graph}{Graph}} \{}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00061}00061     \textcolor{keywordtype}{int} numVertices;}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00062}00062     list<int>* adjLists;}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00063}00063     \textcolor{keywordtype}{bool}* visited;}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00065}00065 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00066}\mbox{\hyperlink{class_graph_af3ff6b295df8bf3bee0bafd7c7d56915}{00066}}     \mbox{\hyperlink{class_graph_af3ff6b295df8bf3bee0bafd7c7d56915}{Graph}}(\textcolor{keywordtype}{int} V);}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00067}\mbox{\hyperlink{class_graph_a2ffbe91c10aac8564898023d4f0fbbbf}{00067}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_a2ffbe91c10aac8564898023d4f0fbbbf}{addEdge}}(\textcolor{keywordtype}{int} src, \textcolor{keywordtype}{int} dest);}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00068}00068     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_af7344ea2aec32ddc99cace497b515a83}{DFS}}(\textcolor{keywordtype}{int} vertex);}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00069}00069 \};}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00071}00071 \textcolor{comment}{// Initialize graph}}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00072}00072 \mbox{\hyperlink{class_graph_a7377fb78cab55e7d3bb72d151ccaecba}{Graph::Graph}}(\textcolor{keywordtype}{int} vertices) \{}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00073}00073     numVertices = vertices;}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00074}00074     adjLists = \textcolor{keyword}{new} list<int>[vertices];}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00075}00075     visited = \textcolor{keyword}{new} \textcolor{keywordtype}{bool}[vertices];}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00076}00076 \}}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00078}00078 \textcolor{comment}{// Add edges}}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00079}00079 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_a2ffbe91c10aac8564898023d4f0fbbbf}{Graph::addEdge}}(\textcolor{keywordtype}{int} src, \textcolor{keywordtype}{int} dest) \{}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00080}00080     adjLists[src].push\_front(dest);}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00081}00081 \}}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00083}00083 \textcolor{comment}{// DFS algorithm}}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00084}\mbox{\hyperlink{class_graph_af7344ea2aec32ddc99cace497b515a83}{00084}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_af7344ea2aec32ddc99cace497b515a83}{Graph::DFS}}(\textcolor{keywordtype}{int} vertex) \{}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00085}00085     visited[vertex] = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00086}00086     list<int> adjList = adjLists[vertex];}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00088}00088     cout << vertex << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00090}00090     list<int>::iterator i;}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00091}00091     \textcolor{keywordflow}{for} (i = adjList.begin(); i != adjList.end(); ++i)}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00092}00092         \textcolor{keywordflow}{if} (!visited[*i])}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00093}00093             \mbox{\hyperlink{class_graph_af7344ea2aec32ddc99cace497b515a83}{DFS}}(*i);}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00094}00094 \}}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00096}\mbox{\hyperlink{_depth_first_graph_tree_traversals_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00096}} \textcolor{keywordtype}{int} \mbox{\hyperlink{_depth_first_graph_tree_traversals_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}() \{}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00097}00097     \mbox{\hyperlink{class_graph}{Graph}} g(4);}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00098}00098     g.\mbox{\hyperlink{class_graph_a2ffbe91c10aac8564898023d4f0fbbbf}{addEdge}}(0, 1);}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00099}00099     g.\mbox{\hyperlink{class_graph_a2ffbe91c10aac8564898023d4f0fbbbf}{addEdge}}(0, 2);}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00100}00100     g.\mbox{\hyperlink{class_graph_a2ffbe91c10aac8564898023d4f0fbbbf}{addEdge}}(1, 2);}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00101}00101     g.\mbox{\hyperlink{class_graph_a2ffbe91c10aac8564898023d4f0fbbbf}{addEdge}}(2, 3);}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00103}00103     g.\mbox{\hyperlink{class_graph_af7344ea2aec32ddc99cace497b515a83}{DFS}}(2);}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00105}00105     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{_depth_first_graph_tree_traversals_8cpp_source_l00106}00106 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,83 @@
+\hypertarget{_quick_sort_8cpp_source}{}\doxysection{Quick\+Sort.\+cpp}
+\label{_quick_sort_8cpp_source}\index{Bootcamp/Algorithms/QuickSort.cpp@{Bootcamp/Algorithms/QuickSort.cpp}}
+\mbox{\hyperlink{_quick_sort_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00014}00014 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00015}00015 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00016}00016 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00017}00017 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00020}00020 \textcolor{comment}{// A utility function to swap two elements}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00021}\mbox{\hyperlink{_quick_sort_8cpp_a4b9708d87be7a409eff20e5e7e8b43c8}{00021}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_quick_sort_8cpp_a4b9708d87be7a409eff20e5e7e8b43c8}{swap}}(\textcolor{keywordtype}{int}* \mbox{\hyperlink{_binary_search_8cpp_a34eebba7303340e07cd8fc27ff9aed3e}{a}}, \textcolor{keywordtype}{int}* b)}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00022}00022 \{}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00023}00023     \textcolor{keywordtype}{int} t = *\mbox{\hyperlink{_binary_search_8cpp_a34eebba7303340e07cd8fc27ff9aed3e}{a}};}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00024}00024     *\mbox{\hyperlink{_binary_search_8cpp_a34eebba7303340e07cd8fc27ff9aed3e}{a}} = *b;}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00025}00025     *b = t;}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00026}00026 \}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00028}00028 \textcolor{comment}{/* This function takes last element as pivot, places}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00029}00029 \textcolor{comment}{   the pivot element at its correct position in sorted}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00030}00030 \textcolor{comment}{    array, and places all smaller (smaller than pivot)}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00031}00031 \textcolor{comment}{   to left of pivot and all greater elements to right}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00032}00032 \textcolor{comment}{   of pivot */}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00033}\mbox{\hyperlink{_quick_sort_8cpp_a4985bc30bb7432b504cb923f601a4b20}{00033}} \textcolor{keywordtype}{int} \mbox{\hyperlink{_quick_sort_8cpp_a4985bc30bb7432b504cb923f601a4b20}{partition}}(vector<int> arr, \textcolor{keywordtype}{int} low, \textcolor{keywordtype}{int} high)}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00034}00034 \{}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00035}00035     \textcolor{keywordtype}{int} pivot = arr[high];    \textcolor{comment}{// pivot}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00036}00036     \textcolor{keywordtype}{int} i = (low -\/ 1);  \textcolor{comment}{// Index of smaller element}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00038}00038     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = low; j <= high -\/ 1; j++)}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00039}00039     \{}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00040}00040         \textcolor{comment}{// If current element is smaller than or}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00041}00041         \textcolor{comment}{// equal to pivot}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00042}00042         \textcolor{keywordflow}{if} (arr[j] <= pivot)}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00043}00043         \{}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00044}00044             i++;    \textcolor{comment}{// increment index of smaller element}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00045}00045             \mbox{\hyperlink{_quick_sort_8cpp_a4b9708d87be7a409eff20e5e7e8b43c8}{swap}}(\&arr[i], \&arr[j]);}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00046}00046         \}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00047}00047     \}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00048}00048     \mbox{\hyperlink{_quick_sort_8cpp_a4b9708d87be7a409eff20e5e7e8b43c8}{swap}}(\&arr[i + 1], \&arr[high]);}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00049}00049     \textcolor{keywordflow}{return} (i + 1);}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00050}00050 \}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00052}00052 \textcolor{comment}{/* The main function that implements QuickSort}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00053}00053 \textcolor{comment}{  arr -\/-\/> vector to be sorted,}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00054}00054 \textcolor{comment}{  low  -\/-\/> Starting index,}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00055}00055 \textcolor{comment}{  high  -\/-\/> Ending index */}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00056}\mbox{\hyperlink{_quick_sort_8cpp_ad7e737ce9e0bdbe46d1dd765ddbc4696}{00056}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_quick_sort_8cpp_ad7e737ce9e0bdbe46d1dd765ddbc4696}{quickSort}}(vector<int> arr, \textcolor{keywordtype}{int} low, \textcolor{keywordtype}{int} high)}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00057}00057 \{}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00058}00058     \textcolor{keywordflow}{if} (low < high)}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00059}00059     \{}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00060}00060         \textcolor{comment}{/* pi is partitioning index, arr[p] is now}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00061}00061 \textcolor{comment}{           at right place */}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00062}00062         \textcolor{keywordtype}{int} pi = \mbox{\hyperlink{_quick_sort_8cpp_a4985bc30bb7432b504cb923f601a4b20}{partition}}(arr, low, high);}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00064}00064         \textcolor{comment}{// Separately sort elements before}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00065}00065         \textcolor{comment}{// partition and after partition}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00066}00066         \mbox{\hyperlink{_quick_sort_8cpp_ad7e737ce9e0bdbe46d1dd765ddbc4696}{quickSort}}(arr, low, pi -\/ 1);}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00067}00067         \mbox{\hyperlink{_quick_sort_8cpp_ad7e737ce9e0bdbe46d1dd765ddbc4696}{quickSort}}(arr, pi + 1, high);}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00068}00068     \}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00069}00069 \}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00072}\mbox{\hyperlink{_quick_sort_8cpp_a59b72871577a437752c8cc773fa716d5}{00072}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_quick_sort_8cpp_a59b72871577a437752c8cc773fa716d5}{printArray}}(vector<int> list)}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00073}00073 \{}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00074}00074     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \mbox{\hyperlink{_binary_search_8cpp_a34eebba7303340e07cd8fc27ff9aed3e}{a}} : list)}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00075}00075         cout << \mbox{\hyperlink{_binary_search_8cpp_a34eebba7303340e07cd8fc27ff9aed3e}{a}} << endl;}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00076}00076 \}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00078}\mbox{\hyperlink{_quick_sort_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00078}} \textcolor{keywordtype}{int} \mbox{\hyperlink{_quick_sort_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00079}00079 \{}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00080}00080     \textcolor{comment}{//int arr[] = \{ 10, 7, 8, 9, 1, 5 \};}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00081}00081     vector<int> vec = \{ 10, 7, 8, 9, 1, 5 \};}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00082}00082     }
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00083}00083     \textcolor{comment}{//int n = sizeof(arr) / sizeof(arr[0]);}}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00085}00085     \mbox{\hyperlink{_quick_sort_8cpp_ad7e737ce9e0bdbe46d1dd765ddbc4696}{quickSort}}(vec, 0, vec.size() -\/1);}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00086}00086     printf(\textcolor{stringliteral}{"{}Sorted vector: \(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00087}00087     \mbox{\hyperlink{_quick_sort_8cpp_a59b72871577a437752c8cc773fa716d5}{printArray}}(vec);}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00088}00088     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{_quick_sort_8cpp_source_l00089}00089 \}}
+
+\end{DoxyCode}
